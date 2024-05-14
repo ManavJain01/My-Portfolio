@@ -18,8 +18,8 @@ function Main(){
       cursorDot.style.top = `${posY}px`
 
       cursorOutline.animate({
-        left: `${posX}px`,
-        top: `${posY}px`
+        left: `${posX - 10}px`,
+        top: `${posY - 10}px`
       }, {duration: 500, fill: "forwards"})
     })
 
@@ -28,7 +28,7 @@ function Main(){
 
 
   return(
-    <div className='cursor-none'>
+    <div className='cursor-none overflow-x-hidden'>
       
       {/* NavBar/ Header */}
       <Navbar />
