@@ -1,3 +1,7 @@
+// Importing React Icons
+import { RxHamburgerMenu } from "react-icons/rx";
+import { RxCross1 } from "react-icons/rx";
+
 import menu6 from '../Images/menu6.png'
 import cross from '../Images/cross.png'
 
@@ -7,9 +11,11 @@ import Button from './Button';
 import Navmenu from './Navmenu';
 
 function Navbar() {
+  //Previous functionality
+  //-----------------------------------------------------------------------------------------------------------------------------
   const [menu, setMenu] = useState(false);
   const [enable, setEnable] = useState(true);
-
+  
   function enableMenu(){
     if(menu==false){
       setMenu(true);
@@ -19,10 +25,21 @@ function Navbar() {
       setEnable(true);
     }
   }
+  //-----------------------------------------------------------------------------------------------------------------------------
+  
+  const [showMenu, setShowMenu] = useState(false);
+  
+  function getMenu(){
+    if(showMenu === false){
+      setShowMenu(true);
+    }else{
+      setShowMenu(false);
+    }
+  }
 
   return (
     <>
-      <div className="bg-black md:bg-transparent grid justify-center min-w-fit md:w-auto md:flex">
+      {/* <div className="bg-black md:bg-transparent grid justify-center min-w-fit md:w-auto md:flex">
         <nav className="flex justify-between gap-28 sm:gap-56 md:gap-0 items-center md:w-full">
           <h1 className="whitespace-nowrap text-white text-4xl font-bold font-serif pt-6 pb-4 md:py-12 md:pl-28 lg:pl-32 xl:pl-44">Manav Jain</h1>
           <ul className="hidden md:flex">
@@ -37,6 +54,24 @@ function Navbar() {
           </button>
         </nav>
         {menu && <div className=" ease-in-out delay-300"><Navmenu /></div>}
+      </div> */}
+
+      <div className='h-[10vh] w-[100vw] bg-transparent backdrop-blur-sm fixed text-white flex gap-20 items-center px-10 rounded-b-lg'>
+        <div className="cursor-pointer block md:hidden">
+          {
+            showMenu ? <RxCross1 onClick={()=> getMenu()} className={`h-10 w-10 z-50 text-black ${showMenu ? "absolute" : ""}`} />
+            : <RxHamburgerMenu onClick={()=> getMenu()} className="h-10 w-10" />
+          }         
+        </div>
+        <h1 className='font-semibold text-4xl'>Manav Jain</h1>
+        <nav className={`text-xl ${showMenu ? "flex absolute top-0 left-0 bg-white text-black h-[100vh] w-[100vw] py-32 md:hidden" : "hidden"} md:flex`}>
+          <ul className={`flex gap-10 flex-col md:flex-row ${showMenu ? "flex items-center mx-auto" : ""}`}>
+            <li>Bio</li>
+            <li>Skills</li>
+            <li>Projects</li>
+            <li>Connect</li>
+          </ul>
+        </nav>
       </div>
     </>
   )
