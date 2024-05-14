@@ -1,5 +1,4 @@
 import Navbar from './Navbar';
-import Navmenu from './Navmenu';
 
 function Main(){
   return(
