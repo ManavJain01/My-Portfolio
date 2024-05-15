@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 function Footer(){
   return (
     <div className="bg-black min-h-[30vh] w-[100vw] text-white flex justify-around items-center flex-wrap gap-8 px-10 py-5">
+      {/* Creating Projects Section */}
       <div className="flex flex-col justify-center items-center gap-3">
         <p className="font-semibold text-2xl">Projects</p>
         <ul className="text-gray-400 flex flex-col items-center gap-3">
@@ -18,6 +19,7 @@ function Footer(){
         </ul>
       </div>
       
+      {/* Creating CONNECT Seaction */}
       <div className="flex flex-col gap-3 items-center justify-center">
         <p className="font-semibold text-2xl">CONNECT</p>
         <section className="flex gap-5">

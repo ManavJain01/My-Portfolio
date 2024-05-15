@@ -3,12 +3,19 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { RxCross1 } from "react-icons/rx";
 
 // Importing React Packages
-import {useState} from 'react';
+import {useRef, useState} from 'react';
 import { Link } from "react-router-dom";
 
 function Navbar() {  
+  const Bio  = useRef()
+  const Skills = useRef()
+  const Projects = useRef()
+  const Conect = useRef()
+
+  // Enabling , Disabling Ham-Menu
   const [showMenu, setShowMenu] = useState(false);
   
+  // Enabling , Disabling Ham-Menu
   function getMenu(){
     if(showMenu === false){
       setShowMenu(true);
@@ -16,7 +23,6 @@ function Navbar() {
       setShowMenu(false);
     }
   }
-
   window.onresize = window.onload = function() {
     if(this.innerWidth > 768){
       setShowMenu(false)
@@ -25,7 +31,8 @@ function Navbar() {
 
   return (
     <>
-      <div className='h-[10vh] w-[100vw] bg-transparent backdrop-blur-md fixed text-white flex gap-20 items-center px-10 rounded-b-lg'>
+      <div className='h-[10vh] w-[100vw] bg-transparent backdrop-blur-md fixed text-white flex gap-10 xs:gap-20 items-center px-10 rounded-b-lg'>
+        {/* For Small screens, Our Ham-Menu Icon */}
         <div className="cursor-pointer block md:hidden">
           {
             showMenu ? <RxCross1 onClick={()=> getMenu()} className={`h-10 w-10 z-50 text-black ${showMenu ? "absolute" : ""}`} />
@@ -33,8 +40,10 @@ function Navbar() {
           }         
         </div>
 
-        <Link to="/" className='font-semibold text-4xl whitespace-nowrap'>Manav Jain</Link>
+        {/* My Name */}
+        <Link to="/" className='font-semibold text-4xl whitespace-nowrap text-purple-800'>Manav <span className="text-black">Jain</span></Link>
         
+        {/* NavBar Icons */}
         <nav className={`text-xl ${showMenu ? "flex absolute top-0 left-0 bg-white text-black h-[100vh] w-[100vw] py-32" : "" } md:flex`}>
           <ul className={`flex md:flex gap-10 flex-col md:flex-row ${showMenu ? "flex items-center mx-auto" : "hidden"}`}>
             <li className={`${showMenu? "py-2 hover:bg-blue-400 hover:text-white w-[100vw] text-center" : ""} active:bg-blue-500`}>Bio</li>
