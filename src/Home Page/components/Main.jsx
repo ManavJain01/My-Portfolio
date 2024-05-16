@@ -1,10 +1,10 @@
 // Importing Local Files
 import Navbar from './Navbar';
 import Footer from './Footer';
-import Bio from '../../Bio/Bio'
-import Skills from '../../Skills/Skills'
-import Projects from '../../Projects/Projects'
-import Connect from '../../Connect/Connect'
+import Bio from '../../Bio/Bio.jsx'
+import Skills from '../../Skills/Skills.jsx'
+import Projects from '../../Projects/Projects.jsx'
+import Connect from '../../Connect/Connect.jsx'
 
 // Importing React Packages
 import { useEffect, useRef } from 'react';
