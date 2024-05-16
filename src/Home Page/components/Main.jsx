@@ -4,7 +4,7 @@ import Footer from './Footer';
 import Bio from '../../Bio/Bio'
 import Skills from '../../Skills/Skills'
 import Projects from '../../Projects/Projects'
-import Connect from '../../Connect/Connect'
+// import Connect from '../../Connect/Connect'
 
 // Importing React Packages
 import { useEffect, useRef } from 'react';
@@ -57,7 +57,7 @@ function Main(){
         <div ref={bio}><Bio /></div>
         <div ref={skills}><Skills /></div>
         <div ref={projects}><Projects /></div>
-        <div ref={connect}><Connect /></div>
+        {/* <div ref={connect}><Connect /></div> */}
       </main>
 
       {/* Footer */}
