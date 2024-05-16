@@ -7,7 +7,7 @@ function ContactForm(){
       <div className="w-full flex flex-col gap-5">
         {/* Replace with your Access Key */}
         <input type="hidden" name="access_key" value="0c878e5f-80d6-4475-abf0-345c75cb6041" />
-        <section className="flex gap-5">
+        <section className="flex flex-wrap gap-5">
           <input
             type="text"
             name="name"
@@ -23,7 +23,7 @@ function ContactForm(){
             className="flex-1 py-1 px-3 rounded-sm border-none outline-none" />
         </section>
 
-        <section className="flex gap-5">
+        <section className="flex flex-wrap gap-5">
           <input
             type="text"
             placeholder="SUBJECT"
@@ -46,8 +46,8 @@ function ContactForm(){
         </section>
       </div>
 
-      <button type="submit" className="bg-yellow-500 flex flex-col items-center justify-center w-20 h-20 py-1 px-3 rounded-full rounded-br-none hover:bg-yellow-600">
-        <span className="">Send IT</span>
+      <button type="submit" className="bg-yellow-500 flex flex-col items-center justify-center w-20 h-20 py-1 px-3 rounded-full rounded-br-none hover:bg-yellow-600 hover:text-white">
+        <span>Send IT</span>
         <CgArrowLongRight className="size-10 -mt-3" />
       </button>
     </form>

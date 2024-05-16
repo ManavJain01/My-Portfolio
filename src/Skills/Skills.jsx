@@ -1,6 +1,8 @@
 function Skills(){
   return (
-    <div>Skills</div>
+    <div className="py-20">
+      Skills
+      </div>
   )
 }
 

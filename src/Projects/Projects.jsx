@@ -1,6 +1,8 @@
 function Projects(){
   return (
-    <div>Projects</div>
+    <div className="py-20">
+      Projects
+    </div>
   )
 }
 
