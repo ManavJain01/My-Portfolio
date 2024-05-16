@@ -3,14 +3,10 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { RxCross1 } from "react-icons/rx";
 
 // Importing React Packages
-import {useRef, useState} from 'react';
+import { useState, forwardRef, useEffect } from 'react';
 import { Link } from "react-router-dom";
 
-function Navbar() {  
-  const Bio  = useRef()
-  const Skills = useRef()
-  const Projects = useRef()
-  const Conect = useRef()
+function Navbar( props, ref ) { 
 
   // Enabling , Disabling Ham-Menu
   const [showMenu, setShowMenu] = useState(false);
@@ -29,6 +25,24 @@ function Navbar() {
     }
   }
 
+
+  // Creating Scroll Handler 
+  const scrollHandler = (elemRef) => {
+    window.scrollTo({ top: elemRef.current.offsetTop, behaviour: "smooth" })
+  }
+
+  useEffect(() => {
+    const handleScroll = (event) => {
+      console.log("window.scrollY", window.scrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    }
+  }, [])
+
   return (
     <>
       <div className='h-[10vh] w-[100vw] bg-transparent backdrop-blur-md fixed text-white flex gap-10 xs:gap-20 items-center px-10 rounded-b-lg'>
@@ -46,10 +60,10 @@ function Navbar() {
         {/* NavBar Icons */}
         <nav className={`text-xl ${showMenu ? "flex absolute top-0 left-0 bg-white text-black h-[100vh] w-[100vw] py-32" : "" } md:flex`}>
           <ul className={`flex md:flex gap-10 flex-col md:flex-row ${showMenu ? "flex items-center mx-auto" : "hidden"}`}>
-            <li className={`${showMenu? "py-2 hover:bg-blue-400 hover:text-white w-[100vw] text-center" : ""} active:bg-blue-500`}>Bio</li>
-            <li className={`${showMenu? "py-2 hover:bg-blue-400 hover:text-white w-[100vw] text-center" : ""} active:bg-blue-500`}>Skills</li>
-            <li className={`${showMenu? "py-2 hover:bg-blue-400 hover:text-white w-[100vw] text-center" : ""} active:bg-blue-500`}>Projects</li>
-            <li className={`${showMenu? "py-2 hover:bg-blue-400 hover:text-white w-[100vw] text-center" : ""} active:bg-blue-500`}>Connect</li>
+            <li onClick={() => scrollHandler(ref.bio)} className={`${showMenu? "py-2 hover:bg-blue-400 hover:text-white w-[100vw] text-center" : ""} active:bg-blue-500`}>Bio</li>
+            <li onClick={() => scrollHandler(ref.skills)} className={`${showMenu? "py-2 hover:bg-blue-400 hover:text-white w-[100vw] text-center" : ""} active:bg-blue-500`}>Skills</li>
+            <li onClick={() => scrollHandler(ref.projects)} className={`${showMenu? "py-2 hover:bg-blue-400 hover:text-white w-[100vw] text-center" : ""} active:bg-blue-500`}>Projects</li>
+            <li onClick={() => scrollHandler(ref.connect)} className={`${showMenu? "py-2 hover:bg-blue-400 hover:text-white w-[100vw] text-center" : ""} active:bg-blue-500`}>Connect</li>
           </ul>
         </nav>
       </div>
@@ -57,4 +71,4 @@ function Navbar() {
   )
 }
 
-export default Navbar;
+export default forwardRef(Navbar);
