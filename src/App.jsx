@@ -1,7 +1,7 @@
 import {Route, Routes} from 'react-router-dom'
 
-//      * Portfolio *
-import Portfolio from './Portfolio/components/Main'
+//      * Home Page *
+import Portfolio from './Home Page/components/Main'
 
 //      * Page Not Found *
 import Page404 from './Page 404/components/Page404'
