@@ -31,18 +31,6 @@ function Navbar( props, ref ) {
     window.scrollTo({ top: elemRef.current.offsetTop, behaviour: "smooth" })
   }
 
-  useEffect(() => {
-    const handleScroll = (event) => {
-      console.log("window.scrollY", window.scrollY);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    }
-  }, [])
-
   return (
     <>
       <div className='h-[10vh] w-[100vw] bg-transparent backdrop-blur-md fixed text-white flex gap-10 xs:gap-20 items-center px-10 rounded-b-lg'>

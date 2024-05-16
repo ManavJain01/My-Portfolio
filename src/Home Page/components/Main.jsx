@@ -48,11 +48,10 @@ function Main(){
       <div id="cursor-outline" className="xs:fixed xs:left-0 xs:top-[-50px] xs:w-10 xs:h-10 xs:border-2 xs:border-[#f5f5dc] xs:rounded-full xs:pointer-events-none" />
       
       {/* My Portfolio Main/Body */}
-      <main className="bg-black md:bg-gradient-to-r md:from-indigo-500 md:from-10% md:via-sky-500 md:via-30% md:to-emerald-500 md:to-90% min-h-[100vh]">
-        <div className="/*bg-blue-900 bg-gradient-to-r from-[#09203f] to-[#537895] h-[100vh] w-[100vw] flex flex-col items-center justify-center text-white">
+      <main className="bg-black md:bg-gradient-to-r md:from-indigo-500 md:from-10% md:via-sky-500 md:via-30% md:to-emerald-500 md:to-90% min-h-[100vh] px-32">
+        <div className="/*bg-blue-900 bg-gradient-to-r from-[#09203f] to-[#537895] h-[100vh] flex flex-col items-center justify-center text-white">
           <h1 className="text-6xl font-bold">Building...</h1>
           <h1 className="text-6xl font-bold">Come Back Later To Find out</h1>
-          <button onClick={()=>scrollHandler(connect)}>click here</button>
         </div>
 
         <div ref={bio}><Bio /></div>
