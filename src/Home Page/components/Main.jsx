@@ -4,7 +4,7 @@ import Footer from './Footer';
 import Bio from '../../Bio/Bio.jsx'
 import Skills from '../../Skills/Skills.jsx'
 import Projects from '../../Projects/Projects.jsx'
-// import Connect from '../../Connect/Connect.jsx'
+import Connect from '../../Connect/Connect.jsx'
 
 
 // Importing React Packages
@@ -59,7 +59,7 @@ function Main(){
 
         <div ref={skills}><Skills /></div>
         <div ref={projects}><Projects /></div>
-        {/* <div ref={connect}><Connect /></div> */}
+        <div ref={connect}><Connect /></div>
       </main>
 
       {/* Footer */}
