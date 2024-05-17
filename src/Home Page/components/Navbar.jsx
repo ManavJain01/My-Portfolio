@@ -2,6 +2,9 @@
 import { RxHamburgerMenu } from "react-icons/rx";
 import { RxCross1 } from "react-icons/rx";
 
+// Importing Local files
+import LinkComponent from "../../Common Components/LinkComponent";
+
 // Importing React Packages
 import { useState, forwardRef } from 'react';
 import { Link } from "react-router-dom";
@@ -33,7 +36,7 @@ function Navbar( props, ref ) {
 
   return (
     <>
-      <div className='h-[10vh] w-[100vw] bg-transparent backdrop-blur-md fixed text-white flex gap-10 xs:gap-20 items-center px-10 rounded-b-lg'>
+      <div className='z-50 h-[10vh] w-[100vw] bg-transparent backdrop-blur-md fixed text-white flex gap-10 xs:gap-20 items-center px-10 rounded-b-lg'>
         {/* For Small screens, Our Ham-Menu Icon */}
         <div className="cursor-pointer block md:hidden">
           {
@@ -43,15 +46,15 @@ function Navbar( props, ref ) {
         </div>
 
         {/* My Name */}
-        <Link to="/" className='font-semibold text-4xl whitespace-nowrap text-purple-800'>Manav <span className="text-black">Jain</span></Link>
+        <LinkComponent to="/" content={"Manav"} styles={"font-semibold text-4xl whitespace-nowrap text-purple-800"} >Manav <span className="text-black">Jain</span></LinkComponent>
         
         {/* NavBar Icons */}
         <nav className={`text-xl ${showMenu ? "flex absolute top-0 left-0 bg-white text-black h-[100vh] w-[100vw] py-32" : "" } md:flex`}>
           <ul className={`flex md:flex gap-10 flex-col md:flex-row ${showMenu ? "flex items-center mx-auto" : "hidden"}`}>
-            <li onClick={() => {scrollHandler(ref.bio); setShowMenu(false)}} className={`${showMenu? "py-2 hover:bg-blue-400 hover:text-white w-[100vw] text-center" : ""} active:bg-blue-500`}>Bio</li>
-            <li onClick={() => {scrollHandler(ref.skills); setShowMenu(false)}} className={`${showMenu? "py-2 hover:bg-blue-400 hover:text-white w-[100vw] text-center" : ""} active:bg-blue-500`}>Skills</li>
-            <li onClick={() => {scrollHandler(ref.projects); setShowMenu(false)}} className={`${showMenu? "py-2 hover:bg-blue-400 hover:text-white w-[100vw] text-center" : ""} active:bg-blue-500`}>Projects</li>
-            <li onClick={() => {scrollHandler(ref.connect); setShowMenu(false)}} className={`${showMenu? "py-2 hover:bg-blue-400 hover:text-white w-[100vw] text-center" : ""} active:bg-blue-500`}>Connect</li>
+            <li onClick={() => {scrollHandler(ref.bio); setShowMenu(false)}} className={`${showMenu? "py-2 hover:bg-blue-400 hover:text-white w-[100vw] text-center active:bg-blue-500" : ""} `}>Bio</li>
+            <li onClick={() => {scrollHandler(ref.skills); setShowMenu(false)}} className={`${showMenu? "py-2 hover:bg-blue-400 hover:text-white w-[100vw] text-center active:bg-blue-500" : ""}`}>Skills</li>
+            <li onClick={() => {scrollHandler(ref.projects); setShowMenu(false)}} className={`${showMenu? "py-2 hover:bg-blue-400 hover:text-white w-[100vw] text-center active:bg-blue-500" : ""}`}>Projects</li>
+            <li onClick={() => {scrollHandler(ref.connect); setShowMenu(false)}} className={`${showMenu? "py-2 hover:bg-blue-400 hover:text-white w-[100vw] text-center active:bg-blue-500" : ""}`}>Connect</li>
           </ul>
         </nav>
       </div>

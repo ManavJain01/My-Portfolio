@@ -10,7 +10,10 @@ import { IoLogoNpm } from "react-icons/io";
 import { DiMongodb } from "react-icons/di";
 import { FaAws } from "react-icons/fa";
 import { IoLogoFirebase } from "react-icons/io5";
+import { SiBlockchaindotcom } from "react-icons/si";
 
+// Importing Local Files
+import Education from './Education'
 
 // Importing React Packages
 import { forwardRef } from 'react';
@@ -23,18 +26,14 @@ function Bio(props, ref){
   }
 
   return (
-    <div className="text-white py-20">
+    <div className="text-white flex flex-col gap-20 py-20">
       {/* Introduction */}
       <div className="flex flex-col items-center gap-10">
         {/* My Name */}
-        <p className="text-6xl font-semibold text-white">Hi all, I'm Manav Jain</p>
+        <p className="text-6xl font-semibold text-white">Hi all, I'm Manav</p>
 
         {/* Content */}
-        <section className="text-2xl flex flex-col items-center justify-center">
-          <p>A passionate Full Stack Developer having an experience of building Web applications with Javascript/Reactjs/NodeJs and some other cool libraries and frameworks.</p>
-          <p>I have done my graduation(BCA) from Jiwaji University</p>
-          <p>I have done my Masters(MCA) from Nit Raipur</p>
-        </section>
+        <p className="text-2xl">A passionate Full Stack Developer having an experience of building Web applications with Javascript/Reactjs/NodeJs and some other cool libraries and frameworks.</p>
 
         {/* 2 Buttons */}
         <section className="w-full flex gap-5 justify-between items-center flex-wrap">
@@ -68,6 +67,7 @@ function Bio(props, ref){
           <span className="flex flex-col items-center hover:text-green-700"><DiMongodb className="size-12" /> MongoDB</span>
           <span className="flex flex-col items-center hover:text-orange-400"><FaAws className="size-12" /> aws</span>
           <span className="flex flex-col items-center hover:text-yellow-500"><IoLogoFirebase className="size-12" /> Firebase</span>
+          <span className="flex flex-col items-center hover:text-blue-700"><SiBlockchaindotcom className="size-12" /> BlockChain</span>
         </section>
 
         {/* Content */}
@@ -80,7 +80,35 @@ function Bio(props, ref){
         </section>
       </div>
 
-      
+      {/* Proficiency */}
+      <div className="flex flex-col gap-10">
+        {/* Headline */}
+        <h1 className="text-6xl font-semibold text-white">Proficiency</h1>
+
+        {/* These are percentage divs */}
+        <section className="flex flex-col gap-5">
+          <span className="text-2xl">Frontend/Design</span>
+          <span className="h-6 w-full bg-white rounded-full relative before:absolute before:top-0 before:content-[''] before:h-6 before:w-[90%] before:bg-green-400 before:rounded-r-full" />
+        </section>
+
+        {/* These are percentage divs */}
+        <section className="flex flex-col gap-5">
+          <span className="text-2xl">Backend</span>
+          <span className="h-6 w-full bg-white rounded-full relative before:absolute before:top-0 before:content-[''] before:h-6 before:w-[70%] before:bg-green-400 before:rounded-r-full" />
+        </section>
+
+        {/* These are percentage divs */}
+        <section className="flex flex-col gap-5">
+          <span className="text-2xl">Programming</span>
+        <span className="h-6 w-full bg-white rounded-full relative before:absolute before:top-0 before:content-[''] before:h-6 before:w-[50%] before:bg-green-400 before:rounded-r-full" />          
+        </section>
+      </div>
+
+      {/* Education */}
+      <div className="flex flex-col gap-10">
+        <h1 className="text-6xl font-semibold text-white">Education</h1>
+        <Education />
+      </div>
 
     </div>
   )

@@ -36,10 +36,10 @@ function Connect(){
         <p before="Let's be social" className="transition ease-in-out delay-150 hover:-translate-y-1 text-4xl font-bold hover:bg-gradient-to-r hover:from-pink-500 hover:via-white hover:to-yellow-600 hover:text-transparent bg-clip-text">Let's be social</p>
 
         <section className="flex gap-5">
-          <Link to="https://www.instagram.com/manv_jain/"><FaInstagram className="w-8 h-8 text-black hover:text-pink-400" /></Link>
-          <Link to="https://in.linkedin.com/in/manav-jain-02a54824a"><FaLinkedin className="w-8 h-8 text-black hover:text-blue-700" /></Link>
-          <Link to="https://github.com/manavjain01"><FaGithub className="w-8 h-8 text-black hover:text-white" /></Link>
-          <Link to="https://leetcode.com/u/nit47401t2c/"><SiLeetcode className="w-8 h-8 text-black hover:text-yellow-600" /></Link>
+          <Link to="https://www.instagram.com/manv_jain/"> <FaInstagram className="w-8 h-8 text-black hover:text-pink-400 cursor-none" /></Link>
+          <Link to="https://in.linkedin.com/in/manav-jain-02a54824a"><FaLinkedin className="w-8 h-8 text-black hover:text-blue-700 cursor-none" /></Link>
+          <Link to="https://github.com/manavjain01"><FaGithub className="w-8 h-8 text-black hover:text-white cursor-none" /></Link>
+          <Link to="https://leetcode.com/u/nit47401t2c/"><SiLeetcode className="w-8 h-8 text-black hover:text-yellow-600 cursor-none" /></Link>
         </section>
       </div>
     </div>
