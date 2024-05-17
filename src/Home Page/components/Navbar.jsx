@@ -3,7 +3,7 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { RxCross1 } from "react-icons/rx";
 
 // Importing React Packages
-import { useState, forwardRef, useEffect } from 'react';
+import { useState, forwardRef } from 'react';
 import { Link } from "react-router-dom";
 
 function Navbar( props, ref ) { 
@@ -48,10 +48,10 @@ function Navbar( props, ref ) {
         {/* NavBar Icons */}
         <nav className={`text-xl ${showMenu ? "flex absolute top-0 left-0 bg-white text-black h-[100vh] w-[100vw] py-32" : "" } md:flex`}>
           <ul className={`flex md:flex gap-10 flex-col md:flex-row ${showMenu ? "flex items-center mx-auto" : "hidden"}`}>
-            <li onClick={() => scrollHandler(ref.bio)} className={`${showMenu? "py-2 hover:bg-blue-400 hover:text-white w-[100vw] text-center" : ""} active:bg-blue-500`}>Bio</li>
-            <li onClick={() => scrollHandler(ref.skills)} className={`${showMenu? "py-2 hover:bg-blue-400 hover:text-white w-[100vw] text-center" : ""} active:bg-blue-500`}>Skills</li>
-            <li onClick={() => scrollHandler(ref.projects)} className={`${showMenu? "py-2 hover:bg-blue-400 hover:text-white w-[100vw] text-center" : ""} active:bg-blue-500`}>Projects</li>
-            <li onClick={() => scrollHandler(ref.connect)} className={`${showMenu? "py-2 hover:bg-blue-400 hover:text-white w-[100vw] text-center" : ""} active:bg-blue-500`}>Connect</li>
+            <li onClick={() => {scrollHandler(ref.bio); setShowMenu(false)}} className={`${showMenu? "py-2 hover:bg-blue-400 hover:text-white w-[100vw] text-center" : ""} active:bg-blue-500`}>Bio</li>
+            <li onClick={() => {scrollHandler(ref.skills); setShowMenu(false)}} className={`${showMenu? "py-2 hover:bg-blue-400 hover:text-white w-[100vw] text-center" : ""} active:bg-blue-500`}>Skills</li>
+            <li onClick={() => {scrollHandler(ref.projects); setShowMenu(false)}} className={`${showMenu? "py-2 hover:bg-blue-400 hover:text-white w-[100vw] text-center" : ""} active:bg-blue-500`}>Projects</li>
+            <li onClick={() => {scrollHandler(ref.connect); setShowMenu(false)}} className={`${showMenu? "py-2 hover:bg-blue-400 hover:text-white w-[100vw] text-center" : ""} active:bg-blue-500`}>Connect</li>
           </ul>
         </nav>
       </div>

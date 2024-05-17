@@ -6,6 +6,7 @@ import Skills from '../../Skills/Skills.jsx'
 import Projects from '../../Projects/Projects.jsx'
 import Connect from '../../Connect/Connect.jsx'
 
+
 // Importing React Packages
 import { useEffect, useRef } from 'react';
 
@@ -54,7 +55,7 @@ function Main(){
           <h1 className="text-6xl font-bold">Come Back Later To Find out</h1>
         </div>
 
-        <div ref={bio}><Bio /></div>
+        <div ref={bio}><Bio ref={{connect}} /></div>
         <div ref={skills}><Skills /></div>
         <div ref={projects}><Projects /></div>
         <div ref={connect}><Connect /></div>
