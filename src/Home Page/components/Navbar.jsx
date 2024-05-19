@@ -61,7 +61,7 @@ function Navbar( props, ref ) {
 
       </div>
       
-      <div className={`${showMenu ? "flex relative left-20 top-5" : "hidden"} md:block`}>
+      <div className={`${showMenu ? "flex relative right-28 xs:left-20 top-5" : "hidden"} md:block`}>
         <DarkTheme darkTheme={props.darkTheme} setDarkTheme={props.setDarkTheme} />
       </div>
     </div>

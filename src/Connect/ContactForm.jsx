@@ -4,8 +4,6 @@
 import { CgArrowLongRight } from "react-icons/cg";
 
 function ContactForm({ darkTheme }){
-  console.log(darkTheme);
-
   return (
     <form action="https://api.web3forms.com/submit" method="POST" className={`${darkTheme ? "text-black" : "text-white"} flex flex-col gap-5 items-end`}>
       <div className="w-full flex flex-col gap-5">
