@@ -7,7 +7,7 @@ function ContactForm({ darkTheme }){
   console.log(darkTheme);
 
   return (
-    <form action="https://api.web3forms.com/submit" method="POST" className="flex flex-col gap-5 items-end">
+    <form action="https://api.web3forms.com/submit" method="POST" className={`${darkTheme ? "text-black" : "text-white"} flex flex-col gap-5 items-end`}>
       <div className="w-full flex flex-col gap-5">
         {/* Replace with your Access Key */}
         <input type="hidden" name="access_key" value="0c878e5f-80d6-4475-abf0-345c75cb6041" />
@@ -17,14 +17,14 @@ function ContactForm({ darkTheme }){
             name="name"
             placeholder="NAME"
             required
-            className={`${darkTheme ? "" : ""} flex-1 py-1 px-3 rounded-sm border-none outline-none`} />
+            className="text-black flex-1 py-1 px-3 rounded-sm border-none outline-none" />
 
           <input
             type="email"
             name="email"
             placeholder="EMAIL"
             required
-            className={`${darkTheme ? "" : ""} flex-1 py-1 px-3 rounded-sm border-none outline-none`} />
+            className="text-black flex-1 py-1 px-3 rounded-sm border-none outline-none" />
         </section>
 
         <section className="flex flex-wrap gap-5">
@@ -32,13 +32,13 @@ function ContactForm({ darkTheme }){
             type="text"
             placeholder="SUBJECT"
             name="subject"
-            className={`${darkTheme ? "" : ""} flex-1 py-1 px-3 rounded-sm border-none outline-none`} />
+            className="text-black flex-1 py-1 px-3 rounded-sm border-none outline-none" />
 
           <input
             type="text"
             name="knowMe"
             placeholder="HOW'D YOU HEAR ABOUT ME?"
-            className={`${darkTheme ? "" : ""} flex-1 py-1 px-3 rounded-sm border-none outline-none`} />
+            className="text-black flex-1 py-1 px-3 rounded-sm border-none outline-none" />
         </section>
 
         <section className="flex-1 flex">
@@ -46,7 +46,7 @@ function ContactForm({ darkTheme }){
             type="text"
             name="thinking"
             placeholder="What's on your mind?"
-            className={`${darkTheme ? "" : ""} flex-1 h-48 py-1 px-3 rounded-sm outline-none`} />
+            className="text-black flex-1 h-48 py-1 px-3 rounded-sm outline-none" />
         </section>
       </div>
 

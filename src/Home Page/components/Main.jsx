@@ -4,7 +4,7 @@ import Footer from './Footer';
 import Bio from '../../Bio/Bio.jsx'
 import Skills from '../../Skills/Skills.jsx'
 import Projects from '../../Projects/Projects.jsx'
-import Connect from '../../Connect/Connect.jsx'
+// import Connect from '../../Connect/Connect.jsx'
 
 
 // Importing React Packages
@@ -62,7 +62,7 @@ function Main(){
 
         <div ref={skills}><Skills darkTheme={darkTheme} /></div>
         <div ref={projects}><Projects darkTheme={darkTheme} /></div>
-        <div ref={connect}><Connect darkTheme={darkTheme} /></div>
+        {/* <div ref={connect}><Connect darkTheme={darkTheme} /></div> */}
       </main>
 
       {/* Footer */}
