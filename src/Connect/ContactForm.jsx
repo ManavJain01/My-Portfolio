@@ -3,7 +3,9 @@
 // Importing react icons
 import { CgArrowLongRight } from "react-icons/cg";
 
-function ContactForm(){
+function ContactForm({ darkTheme }){
+  console.log(darkTheme);
+
   return (
     <form action="https://api.web3forms.com/submit" method="POST" className="flex flex-col gap-5 items-end">
       <div className="w-full flex flex-col gap-5">
@@ -15,14 +17,14 @@ function ContactForm(){
             name="name"
             placeholder="NAME"
             required
-            className="flex-1 py-1 px-3 rounded-sm border-none outline-none" />
+            className={`${darkTheme ? "" : ""} flex-1 py-1 px-3 rounded-sm border-none outline-none`} />
 
           <input
             type="email"
             name="email"
             placeholder="EMAIL"
             required
-            className="flex-1 py-1 px-3 rounded-sm border-none outline-none" />
+            className={`${darkTheme ? "" : ""} flex-1 py-1 px-3 rounded-sm border-none outline-none`} />
         </section>
 
         <section className="flex flex-wrap gap-5">
@@ -30,13 +32,13 @@ function ContactForm(){
             type="text"
             placeholder="SUBJECT"
             name="subject"
-            className="flex-1 py-1 px-3 rounded-sm border-none outline-none" />
+            className={`${darkTheme ? "" : ""} flex-1 py-1 px-3 rounded-sm border-none outline-none`} />
 
           <input
             type="text"
             name="knowMe"
             placeholder="HOW'D YOU HEAR ABOUT ME?"
-            className="flex-1 py-1 px-3 rounded-sm border-none outline-none" />
+            className={`${darkTheme ? "" : ""} flex-1 py-1 px-3 rounded-sm border-none outline-none`} />
         </section>
 
         <section className="flex-1 flex">
@@ -44,7 +46,7 @@ function ContactForm(){
             type="text"
             name="thinking"
             placeholder="What's on your mind?"
-            className="flex-1 h-48 py-1 px-3 rounded-sm outline-none" />
+            className={`${darkTheme ? "" : ""} flex-1 h-48 py-1 px-3 rounded-sm outline-none`} />
         </section>
       </div>
 

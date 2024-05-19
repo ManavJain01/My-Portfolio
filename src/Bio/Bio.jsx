@@ -26,14 +26,14 @@ function Bio(props, ref){
   }
 
   return (
-    <div className="text-white flex flex-col gap-20 py-20">
+    <div className={`${props.darkTheme ? "text-white" : "text-black"} flex flex-col gap-20 py-20 pt-48`}>
       {/* Introduction */}
       <div className="flex flex-col items-center gap-10">
         {/* My Name */}
-        <p className="text-6xl font-semibold text-white">Hi all, I'm Manav</p>
+        <p className="text-6xl font-semibold">Hi all, I'm Manav 👋</p>
 
         {/* Content */}
-        <p className="text-2xl">A passionate Full Stack Developer having an experience of building Web applications with Javascript/Reactjs/NodeJs and some other cool libraries and frameworks.</p>
+        <p className="text-2xl">A passionate Full Stack Developer 🚀 having an experience of building Web applications with Javascript / Reactjs / NodeJs and some other cool libraries and frameworks.</p>
 
         {/* 2 Buttons */}
         <section className="w-full flex gap-5 justify-between items-center flex-wrap">
@@ -51,13 +51,13 @@ function Bio(props, ref){
       {/* What I Do */}
       <div className="flex flex-col items-center gap-10">
         {/* What I Do */}
-        <p className="text-6xl font-semibold text-white">What I do</p>
+        <p className="text-6xl font-semibold">What I do</p>
 
         {/* A single line */}
         <p className="text-2xl">CRAZY FULL STACK DEVELOPER WHO WANTS TO EXPLORE EVERY TECH STACK</p>
 
         {/* Icons */}
-        <section className="text-gray-700 flex gap-5 flex-wrap">
+        <section className="text-gray-500 flex gap-5 flex-wrap">
           <span className="flex flex-col items-center hover:text-orange-600"><FaHtml5 className="size-12" /> HTML</span>
           <span className="flex flex-col items-center hover:text-blue-700"><FaCss3Alt className="size-12" /> CSS</span>
           <span className="flex flex-col items-center hover:text-yellow-500"><IoLogoJavascript className="size-12" /> JavaScript</span>
@@ -70,7 +70,7 @@ function Bio(props, ref){
           <span className="flex flex-col items-center hover:text-blue-700"><SiBlockchaindotcom className="size-12" /> BlockChain</span>
         </section>
 
-        {/* Content */}
+        {/* ⚡ Content */}
         <section className="text-semibold text-2xl">
           <p>⚡ Develop highly interactive Front end / User Interfaces for your web applications</p>
 
@@ -83,30 +83,30 @@ function Bio(props, ref){
       {/* Proficiency */}
       <div className="flex flex-col gap-10">
         {/* Headline */}
-        <h1 className="text-6xl font-semibold text-white">Proficiency</h1>
+        <h1 className="text-6xl font-semibold">Proficiency</h1>
 
         {/* These are percentage divs */}
         <section className="flex flex-col gap-5">
           <span className="text-2xl">Frontend/Design</span>
-          <span className="h-6 w-full bg-white rounded-full relative before:absolute before:top-0 before:content-[''] before:h-6 before:w-[90%] before:bg-green-400 before:rounded-r-full" />
+          <span className={`${props.darkTheme ? "bg-white" : "bg-gray-200"} h-6 w-full rounded-full relative before:absolute before:top-0 before:content-[''] before:h-6 before:w-[90%] before:bg-green-400 before:rounded-r-full`} />
         </section>
 
         {/* These are percentage divs */}
         <section className="flex flex-col gap-5">
           <span className="text-2xl">Backend</span>
-          <span className="h-6 w-full bg-white rounded-full relative before:absolute before:top-0 before:content-[''] before:h-6 before:w-[70%] before:bg-green-400 before:rounded-r-full" />
+          <span className={`${props.darkTheme ? "bg-white" : "bg-gray-200"} h-6 w-full rounded-full relative before:absolute before:top-0 before:content-[''] before:h-6 before:w-[70%] before:bg-green-400 before:rounded-r-full`} />
         </section>
 
         {/* These are percentage divs */}
         <section className="flex flex-col gap-5">
           <span className="text-2xl">Programming</span>
-        <span className="h-6 w-full bg-white rounded-full relative before:absolute before:top-0 before:content-[''] before:h-6 before:w-[50%] before:bg-green-400 before:rounded-r-full" />          
+        <span className={`${props.darkTheme ? "bg-white" : "bg-gray-200"} h-6 w-full rounded-full relative before:absolute before:top-0 before:content-[''] before:h-6 before:w-[50%] before:bg-green-400 before:rounded-r-full`} />          
         </section>
       </div>
 
       {/* Education */}
       <div className="flex flex-col gap-10">
-        <h1 className="text-6xl font-semibold text-white">Education</h1>
+        <h1 className="text-6xl font-semibold">Education</h1>
         <Education />
       </div>
 

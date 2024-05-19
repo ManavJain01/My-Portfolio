@@ -1,6 +1,6 @@
-function Projects(){
+function Projects({ darkTheme }){
   return (
-    <div className="py-20">
+    <div className={`${darkTheme ? "text-white" : "text-black"} py-20`}>
       Projects
     </div>
   )
