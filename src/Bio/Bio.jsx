@@ -88,19 +88,19 @@ function Bio(props, ref){
         {/* These are percentage divs */}
         <section className="flex flex-col gap-5">
           <span className="text-2xl">Frontend/Design</span>
-          <span className={`${props.darkTheme ? "bg-white" : "bg-gray-200"} h-6 w-full rounded-full relative before:absolute before:top-0 before:content-[''] before:h-6 before:w-[90%] before:bg-green-400 before:rounded-r-full`} />
+          <span className={`${props.darkTheme ? "bg-white" : "bg-white"} h-6 w-full rounded-full relative before:absolute before:top-0 before:content-[''] before:h-6 before:w-[90%] before:bg-green-400 before:rounded-r-full`} />
         </section>
 
         {/* These are percentage divs */}
         <section className="flex flex-col gap-5">
           <span className="text-2xl">Backend</span>
-          <span className={`${props.darkTheme ? "bg-white" : "bg-gray-200"} h-6 w-full rounded-full relative before:absolute before:top-0 before:content-[''] before:h-6 before:w-[70%] before:bg-green-400 before:rounded-r-full`} />
+          <span className={`${props.darkTheme ? "bg-white" : "bg-white"} h-6 w-full rounded-full relative before:absolute before:top-0 before:content-[''] before:h-6 before:w-[70%] before:bg-green-400 before:rounded-r-full`} />
         </section>
 
         {/* These are percentage divs */}
         <section className="flex flex-col gap-5">
           <span className="text-2xl">Programming</span>
-        <span className={`${props.darkTheme ? "bg-white" : "bg-gray-200"} h-6 w-full rounded-full relative before:absolute before:top-0 before:content-[''] before:h-6 before:w-[50%] before:bg-green-400 before:rounded-r-full`} />          
+        <span className={`${props.darkTheme ? "bg-white" : "bg-white"} h-6 w-full rounded-full relative before:absolute before:top-0 before:content-[''] before:h-6 before:w-[50%] before:bg-green-400 before:rounded-r-full`} />          
         </section>
       </div>
 

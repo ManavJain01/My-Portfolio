@@ -50,20 +50,20 @@ function Navbar( props, ref ) {
         <LinkComponent to="/" content={"Manav"} styles={"font-semibold text-4xl whitespace-nowrap text-purple-800"} >Manav <span className="text-purple-950">Jain</span></LinkComponent>
         
         {/* NavBar Icons */}
-        <nav className={`text-xl ${showMenu ? "flex absolute top-0 left-0 h-[100vh] w-[100vw] py-32" : "" } ${props.darkTheme ? "text-white" : "text-black"} ${showMenu ? props.darkTheme ? "bg-black" : "bg-gray-200" : ""} md:flex`}>
-          <ul className={`flex md:flex gap-10 flex-col md:flex-row ${showMenu ? "flex items-center mx-auto" : "hidden"}`}>
+        <nav className={`text-xl ${showMenu ? "flex absolute top-0 left-0 h-[100vh] w-[100vw] py-32" : "" } ${props.darkTheme ? "text-white" : "text-black"} ${showMenu ? props.darkTheme ? "bg-black" : "bg-gray-200" : ""} md:flex md:gap-10 md:items-center`}>
+          <ul className={`flex md:flex md:items-center gap-10 flex-col md:flex-row ${showMenu ? "flex items-center mx-auto" : "hidden"}`}>
             <li onClick={() => {scrollHandler(ref.bio); setShowMenu(false)}} className={`${showMenu? "py-2 hover:bg-blue-400 hover:text-white w-[100vw] text-center active:bg-blue-500" : ""} `}>Bio</li>
             <li onClick={() => {scrollHandler(ref.skills); setShowMenu(false)}} className={`${showMenu? "py-2 hover:bg-blue-400 hover:text-white w-[100vw] text-center active:bg-blue-500" : ""}`}>Skills</li>
             <li onClick={() => {scrollHandler(ref.projects); setShowMenu(false)}} className={`${showMenu? "py-2 hover:bg-blue-400 hover:text-white w-[100vw] text-center active:bg-blue-500" : ""}`}>Projects</li>
             <li onClick={() => {scrollHandler(ref.connect); setShowMenu(false)}} className={`${showMenu? "py-2 hover:bg-blue-400 hover:text-white w-[100vw] text-center active:bg-blue-500" : ""}`}>Connect</li>
+            
+            {/* Dark Theme Toggle */}
+            <li><DarkTheme darkTheme={props.darkTheme} setDarkTheme={props.setDarkTheme} /></li>
           </ul>
         </nav>
 
       </div>
       
-      <div className={`${showMenu ? "flex relative right-28 xs:left-20 top-5" : "hidden"} md:block`}>
-        <DarkTheme darkTheme={props.darkTheme} setDarkTheme={props.setDarkTheme} />
-      </div>
     </div>
   )
 }
