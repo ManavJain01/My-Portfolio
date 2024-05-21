@@ -56,7 +56,7 @@ function Main(){
         <div ref={skills}><Skills darkTheme={darkTheme} /></div>
 
         <div ref={projects}><Projects darkTheme={darkTheme} /></div>
-        <div><Connect /></div>
+        <div ref={connect}><Connect darkTheme={darkTheme} /></div>
       </main>
 
       {/* Footer */}
