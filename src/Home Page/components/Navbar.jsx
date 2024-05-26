@@ -8,7 +8,6 @@ import DarkTheme from "../../Common Components/DarkTheme";
 
 // Importing React Packages
 import { useState, forwardRef } from 'react';
-import { Link } from "react-router-dom";
 
 function Navbar( props, ref ) { 
 
@@ -35,6 +34,9 @@ function Navbar( props, ref ) {
     window.scrollTo({ top: elemRef.current.offsetTop, behaviour: "smooth" })
   }
 
+  // Array of referrences of navbar
+  const refArray = [ref.bio, ref.skills, ref.projects, ref.connect]
+
   return (
     <div className={`${props.darkTheme ? "text-white" : "text-black"} z-50 flex justify-between items-center gap-5 h-[10vh] w-[100vw] bg-transparent backdrop-blur-md fixed px-10 pr-40 rounded-b-lg`}>
       <div className='flex gap-10 xs:gap-20 items-center'>
@@ -51,12 +53,11 @@ function Navbar( props, ref ) {
         
         {/* NavBar Icons */}
         <nav className={`text-xl ${showMenu ? "flex absolute top-0 left-0 h-[100vh] w-[100vw] py-32" : "" } ${props.darkTheme ? "text-white" : "text-black"} ${showMenu ? props.darkTheme ? "bg-black" : "bg-gray-200" : ""} md:flex md:gap-10 md:items-center`}>
-          <ul className={`flex md:flex md:items-center gap-10 flex-col md:flex-row ${showMenu ? "flex items-center mx-auto" : "hidden"}`}>
-            <li onClick={() => {scrollHandler(ref.bio); setShowMenu(false)}} className={`${showMenu? "py-2 hover:bg-blue-400 hover:text-white w-[100vw] text-center active:bg-blue-500" : ""} `}>Bio</li>
-            <li onClick={() => {scrollHandler(ref.skills); setShowMenu(false)}} className={`${showMenu? "py-2 hover:bg-blue-400 hover:text-white w-[100vw] text-center active:bg-blue-500" : ""}`}>Skills</li>
-            <li onClick={() => {scrollHandler(ref.projects); setShowMenu(false)}} className={`${showMenu? "py-2 hover:bg-blue-400 hover:text-white w-[100vw] text-center active:bg-blue-500" : ""}`}>Projects</li>
-            <li onClick={() => {scrollHandler(ref.connect); setShowMenu(false)}} className={`${showMenu? "py-2 hover:bg-blue-400 hover:text-white w-[100vw] text-center active:bg-blue-500" : ""}`}>Connect</li>
-            
+          <ul className={`flex md:flex md:items-center gap-10 flex-col md:flex-row ${showMenu ? "flex items-center mx-auto" : "hidden"}`}>  
+            {["Bio", "Skills", "Projects", "Connect"].map((e, i) =>
+              <li key={e} onClick={() => {scrollHandler(refArray[i]); setShowMenu(false)}} className={`${showMenu? "py-2 hover:bg-blue-400 hover:text-white w-[100vw] text-center active:bg-blue-500" : "px-2 py-1 rounded-md"} ${showMenu === false ? props.darkTheme ? "hover:bg-purple-600" : "hover:text-purple-600 hover:bg-gray-300" : ""}`}>{e}</li>
+            )}
+
             {/* Dark Theme Toggle */}
             <li><DarkTheme darkTheme={props.darkTheme} setDarkTheme={props.setDarkTheme} /></li>
           </ul>

@@ -8,23 +8,19 @@ function DarkTheme({ darkTheme, setDarkTheme }){
     else setDarkTheme(false);
   }
 
-
   return (
-    <div className="mb-5 relative">
-      {darkTheme
-        ?<IoMoonSharp className="z-10 text-black absolute top-[14px] right-2" />
-        :<GoSun className="z-10 text-yellow-600 absolute top-[14px] left-[6px]" />
-      }
-
-      <input
-        type="checkbox"
-        name="darkTheme"
-        id="darkTheme"
+    <div>
+      <div
         onClick={() => Theme()}
-        className={`cursor-none none w-14 checked:before:bg-blue-500 checked:after:translate-x-[23px] relative
-          before:absolute before:top-0 before:left-0 before:content-[''] before:w-14 before:h-7 before:bg-[#a8a6a6] before:rounded-[200px]
-          after:absolute after:top-[2px] after:left-[3px] after:content-[''] after:w-7 after:h-6 after:bg-[#fff] after:rounded-full
-          `} />
+        className={`w-14 h-7 ${darkTheme ? "bg-blue-500" : "bg-[#a8a6a6]"} rounded-full`}>
+          <div
+            className={`w-7 h-6 relative top-[2px] ${darkTheme ? "left-6" : "left-1"} bg-white pt-[2px] pl-1 rounded-full`}>
+            {darkTheme
+              ?<IoMoonSharp className="z-10 text-black" />
+              :<GoSun className="z-10 text-yellow-600" />
+            }
+          </div>
+      </div>
     </div>
   )
 }
