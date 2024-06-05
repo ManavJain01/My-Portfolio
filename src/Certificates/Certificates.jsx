@@ -6,7 +6,8 @@ export default function Certificates({ darkTheme }) {
 
 
   return (
-    <div className={`${darkTheme ? "text-white" : "text-black"} flex flex-col gap-5 text-center py-20`}>
+    <div className={`${darkTheme ? "text-white" : "text-black"} flex flex-col gap-20 py-20`}>
+      <h1 className="text-6xl font-semibold">Certificates</h1>
       <div className="w-full flex flex-wrap gap-10 justify-around">
         {
           certiArr.map((e, i) =>{
@@ -15,7 +16,7 @@ export default function Certificates({ darkTheme }) {
                 <img
                   src={e}
                   alt="ibm"
-                  className={`h-72 shadow-2xl hover:scale-[120%] hover:shadow-green-400 ${darkTheme ? "shadow-red-400" : "shadow-gray-400"}`} />
+                  className={`h-72 shadow-2xl hover:scale-[120%] hover:shadow-green-400 ${darkTheme ? "shadow-purple-400" : "shadow-gray-400"}`} />
               </div>
             )
           })
