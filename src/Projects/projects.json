@@ -2,13 +2,13 @@
   {
     "name": "Medicine Ecommerce",
     "link": "https://dismefa.netlify.app/",
-    "img": "Images/Dismefa.png",
+    "img": "https://mern-projects-amber.vercel.app/assets/Dismefa-DmmBBZn1.png",
     "category": "MERN STACK PROJECTS"
   },
   {
     "name": "Food Delivery App",
     "link": "https://food-delivery-app-phi-ten.vercel.app/",
-    "img": "Images/Food Delivery App.png",
+    "img": "https://mern-projects-amber.vercel.app/assets/Food%20Delivery%20App-B2qqpkch.png",
     "category": "MERN STACK PROJECTS"
   }
 ]

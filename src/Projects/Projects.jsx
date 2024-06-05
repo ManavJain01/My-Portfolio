@@ -21,18 +21,16 @@ function Projects({ darkTheme }){
                     .filter((e, i) => e.category === item)
                     .map((e,i) => {
                       return(
-                        // <div>
-                          <Link key={i} to={e.link} className={`rounded-md shadow-2xl hover:shadow-green-400 active:hover:shadow-blue-400 cursor-none hover:scale-[120%] ${darkTheme ? "shadow-purple-400" : "shadow-gray-400"}`}>
-                            <img
-                              src={`src/Projects/${e.img}`}
-                              alt="project"
-                              className="h-48 w-80" />
-                            
-                            <div className="p-5 flex flex-col items-center">
-                              <h1>{e.name}</h1>
-                            </div>
-                          </Link>
-                        // </div>
+                        <Link key={i} to={e.link} className={`rounded-md shadow-2xl hover:shadow-green-400 active:hover:shadow-blue-400 cursor-none hover:scale-[120%] ${darkTheme ? "shadow-purple-400" : "shadow-gray-400"}`}>
+                          <img
+                            src={e.img}
+                            alt="project"
+                            className="h-48 w-80" />
+                          
+                          <div className="p-5 flex flex-col items-center">
+                            <h1>{e.name}</h1>
+                          </div>
+                        </Link>
                       )
                     })
                   }
