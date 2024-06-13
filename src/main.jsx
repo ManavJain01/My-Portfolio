@@ -23,19 +23,19 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <BrowserRouter>
       <Routes>
         {/* Main Page */}
-        {/* Uncomment 🢛 */}
-        {/* <Route path="/" element={<App />}></Route> */}
+        <Route path="/HomePage" element={<App />}></Route>
 
         {/* Portfolio 1 */}
         {/* Uncomment 🢛 */}
         {/* <Route path="/Portfolio1" element={<Portfolio1 />}></Route> */}
 
         {/* Comment 🢛 */} 
-        <Route path="/" element={<Portfolio1 />}></Route>
+        <Route path="/" element={<Portfolio1 />}>
+          <Route path="/Portfolio1"></Route>
+        </Route>
 
         {/* Portfolio 2 */}
-        {/* Uncomment 🢛 */}
-        {/* <Route path="/Portfolio2" element={<Portfolio2 />}></Route> */}
+        <Route path="/Portfolio2" element={<Portfolio2 />}></Route>
 
         {/* Page Not Found */}
         <Route path="/*" element={<Page404 />}></Route>

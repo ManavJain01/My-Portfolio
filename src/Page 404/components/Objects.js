@@ -1,4 +1,4 @@
-[
+export const Objects = [
   {
     p:"Australia is wider than the moon."
   },
