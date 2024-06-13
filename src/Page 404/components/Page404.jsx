@@ -8,7 +8,7 @@ function Page404(){
         <span className="text-7xl text-gray-500">Page Not Found</span>
         <span className="text-lg text-gray-500">The Page you are looking for doesn't exist or an error occurred.
         Go back !</span>
-        <Link to="/" className="text-blue-700 hover:text-blue-800">Go To React Projects Page.</Link>
+        <Link to="/" className="text-blue-700 hover:text-blue-800">Go To Portfolio Page.</Link>
 
         <h2>Fun Facts</h2>
         <p></p>
