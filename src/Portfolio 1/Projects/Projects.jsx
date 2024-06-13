@@ -1,5 +1,5 @@
 // Importing my projects
-import projects from './projects.json'
+import projects from '../../Projects/projects.json'
 
 // Importing React Packages
 import { Link } from 'react-router-dom'

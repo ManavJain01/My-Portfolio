@@ -4,11 +4,11 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 
 // Importing Local Files
-import HCJIBM from './certificates/HTML-CSS-JS-IBM.png'
-import ReactIBM from './certificates/React-IBM.png'
-import BackEnd from './certificates/Node-Express-IBM.png'
-import Github from './certificates/Github.png'
-// import CloudIBM from './certificates/Cloud-Computing-IBM.png'
+import HCJIBM from '../../certificates/HTML-CSS-JS-IBM.png'
+import ReactIBM from '../../certificates/React-IBM.png'
+import BackEnd from '../../certificates/Node-Express-IBM.png'
+import Github from '../../certificates/Github.png'
+// import CloudIBM from '../../certificates/Cloud-Computing-IBM.png'
 
 export default function Certificates({ darkTheme }) {
   // Array of Certificates
