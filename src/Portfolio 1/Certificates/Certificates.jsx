@@ -9,10 +9,11 @@ import ReactIBM from '../../certificates/React-IBM.png'
 import BackEnd from '../../certificates/Node-Express-IBM.png'
 import Github from '../../certificates/Github.png'
 // import CloudIBM from '../../certificates/Cloud-Computing-IBM.png'
+import Python from '../../certificates/Python for DS, AI & Dev-IBM.png'
 
 export default function Certificates({ darkTheme }) {
   // Array of Certificates
-  const certiArr = [BackEnd, ReactIBM, Github, HCJIBM /*, CloudIBM */]
+  const certiArr = [BackEnd, ReactIBM, Github, HCJIBM /*, CloudIBM, Python */]
 
   // UseStates
   const [selectCerti, setSelectCerti] = useState(BackEnd)

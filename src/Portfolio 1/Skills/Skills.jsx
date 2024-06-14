@@ -3,6 +3,8 @@ import { FaHtml5 } from "react-icons/fa";
 import { FaCss3Alt } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io5";
 import { RiReactjsFill } from "react-icons/ri";
+import { SiTypescript } from "react-icons/si";
+import { RiNextjsFill } from "react-icons/ri";
 import { DiNodejs } from "react-icons/di";
 import { IoLogoNpm } from "react-icons/io";
 import { DiMongodb } from "react-icons/di";
@@ -36,6 +38,8 @@ function Skills({ darkTheme }){
             <span className="flex flex-col items-center hover:text-blue-700"><FaCss3Alt className="size-12" /> CSS</span>
             <span className="flex flex-col items-center hover:text-yellow-500"><IoLogoJavascript className="size-12" /> JavaScript</span>
             <span className="flex flex-col items-center hover:text-blue-600"><RiReactjsFill className="size-12" /> ReactJs</span>
+            <span className="flex flex-col items-center hover:text-blue-800"><SiTypescript className="size-12" /> TypeScript</span>
+            <span className="flex flex-col items-center hover:text-gray-900"><RiNextjsFill className="size-12" /> NextJs</span>
             <span className="flex flex-col items-center hover:text-green-500"><DiNodejs className="size-12" /> NodeJs</span>
             <span className="flex flex-col items-center hover:text-red-700"><IoLogoNpm className="size-12" /> npm</span>
             <span className="flex flex-col items-center hover:text-green-700"><DiMongodb className="size-12" /> MongoDB</span>
