@@ -21,7 +21,7 @@ function Bio(props, ref){
       <div className="flex flex-col items-center gap-10">
         {/* My Name */}
         <p className="flex items-center gap-2 md:gap-5">
-          <span className="text-4xl sm:text-6xl font-semibold whitespace-nowrap">Hi all, I'm Manav</span>
+          <span className="text-6xl font-semibold text-center">Hi all, I'm Manav</span>
           <img
             src="https://gifdb.com/images/high/cute-wave-emoji-hand-59s88kk0zj3xho40.webp"
             alt="gif"

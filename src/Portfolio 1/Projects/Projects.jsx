@@ -14,7 +14,7 @@ function Projects({ darkTheme }){
           category.map((item, i) => {
             return(
               <div key={i} className="flex flex-col gap-20">
-                <h1 className="text-6xl font-semibold">{item}</h1>
+                <h1 className="text-6xl font-semibold text-center">{item}</h1>
                 <div className="flex flex-wrap gap-10 justify-around">
                   {
                     projects
