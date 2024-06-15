@@ -45,7 +45,7 @@ export default function NavBar(props) {
   }
 
   return (
-    <div className="flex justify-end">
+    <div className="sticky top-0 flex justify-end">
       <nav className={`relative w-full md:w-[80%] lg:w-[70%] px-10 py-2 flex justify-between rounded-sm shadow-md ${props.darkTheme ? "bg-gray-900 shadow-gray-800" : "bg-gray-400 bg-opacity-30 shadow-gray-400"}`}>
         <span className="text-4xl whitespace-nowrap">Manav Jain</span>
 

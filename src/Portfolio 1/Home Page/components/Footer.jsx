@@ -5,13 +5,30 @@ import { FaGithub } from "react-icons/fa";
 
 //Importing React Packages
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 // Importing Local files
 import LinkComponent from "../../Common Components/LinkComponent";
 
 function Footer(){
+  // UseStates
+  const [secretBtn, setSecretBtn] = useState(false);
+
+  //functions
+  window.onresize = window.onload = function() {
+    if(this.innerWidth < 768){
+      setSecretBtn(false)
+    }
+  }
+
+  function showSecretBtn(){
+    setTimeout(() => {
+      setSecretBtn(true)
+    }, 10000);
+  }
+
   return (
-    <div className="bg-black min-h-[30vh] w-[100vw] text-white flex justify-around items-center flex-wrap gap-8 px-10 py-5">
+    <div className="relative bg-black min-h-[30vh] w-[100vw] text-white flex justify-around items-center flex-wrap gap-8 px-10 py-5">
       {/* Creating Projects Section */}
       <div className="flex flex-col justify-center items-center gap-3">
         <p className="font-semibold text-2xl">Projects</p>
@@ -31,6 +48,9 @@ function Footer(){
           <Link to="https://github.com/manavjain01"><FaGithub className="w-8 h-8 text-gray-400 cursor-none" /></Link>
         </section>
       </div>
+
+      <span onMouseOver={() => showSecretBtn()} className="absolute right-0 bottom-0 px-3 py-1 text-black bg-black">Hover me</span>
+      <Link to='/HomePage' className={`absolute -left-28 bottom-0 px-5 py-1 bg-gray-900 text-gray-600 rounded-lg cursor-none hover:-left-4 ${secretBtn ? "flex" : "hidden"}`}>Home Page</Link>
     </div>
   )
 }

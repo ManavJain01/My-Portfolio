@@ -19,11 +19,11 @@ function Skills({ darkTheme }){
   return (
     <div className={`${darkTheme ? "text-white" : "text-black"} flex flex-col gap-20 py-20`}>
       {/* What I Do */}
-      <div className="flex gap-5">
+      <div className="flex items-center gap-5">
         <img 
           src="https://raw.githubusercontent.com/TheDudeThatCode/TheDudeThatCode/master/Assets/Developer.gif"
           alt="gif"
-          className="hidden lg:flex w-[35rem]" />
+          className="hidden lg:flex h-full w-[35rem]" />
         
         <div className="flex flex-col gap-10">
           {/* What I Do */}

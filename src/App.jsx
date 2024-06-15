@@ -19,6 +19,12 @@ function App() {
       name: "portfolio 2",
       createdOn: "Start this project on 13 june'24",
       link: "/portfolio2",
+      img: portfolio2
+    },
+    {
+      name: "portfolio 3",
+      createdOn: "Not Started yet!!!",
+      link: "/portfolio3",
       img: pageNotFound
     }
   ]
