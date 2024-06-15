@@ -4,6 +4,9 @@ import projects from '../../Projects/projects.json'
 // Importing React Packages
 import { Link } from 'react-router-dom'
 
+// Importing Framer Motion
+import { motion } from "framer-motion"
+
 function Projects({ darkTheme }){
   const category = ["MERN STACK PROJECTS"]
 
@@ -14,8 +17,8 @@ function Projects({ darkTheme }){
           category.map((item, i) => {
             return(
               <div key={i} className="flex flex-col gap-20">
-                <h1 className="text-6xl font-semibold text-center">{item}</h1>
-                <div className="flex flex-wrap gap-10 justify-around">
+                <motion.h1 whileInView={{opacity:1, y:0}} initial={{opacity:0, y:-100}} transition={{duration:1.5}} className="text-6xl font-semibold text-center md:text-start">{item}</motion.h1>
+                <motion.div whileInView={{opacity:1, scale:"100%"}} initial={{opacity:0, scale:0}} transition={{duration:1.5}} className="flex flex-wrap gap-10 justify-around">
                   {
                     projects
                     .filter((e, i) => e.category === item)
@@ -34,7 +37,7 @@ function Projects({ darkTheme }){
                       )
                     })
                   }
-                </div>
+                </motion.div>
               </div>
             )
           })

@@ -9,19 +9,15 @@ import DarkTheme from "../../Common Components/DarkTheme";
 // Importing React Packages
 import { useState, forwardRef } from 'react';
 
+// Importing Framer Motion
+import { motion, MotionConfig } from "framer-motion"
+
 function Navbar( props, ref ) { 
 
   // Enabling , Disabling Ham-Menu
   const [showMenu, setShowMenu] = useState(false);
   
-  // Enabling , Disabling Ham-Menu
-  function getMenu(){
-    if(showMenu === false){
-      setShowMenu(true);
-    }else{
-      setShowMenu(false);
-    }
-  }
+  // Turn off my menu when bigger size on render
   window.onresize = window.onload = function() {
     if(this.innerWidth > 768){
       setShowMenu(false)
@@ -42,15 +38,61 @@ function Navbar( props, ref ) {
       <div className='flex gap-10 xs:gap-20 items-center'>
         {/* For Small screens, Our Ham-Menu Icon */}
         <div className={`${props.darkTheme ? "text-white" : "text-black"} cursor-pointer block md:hidden`}>
-          {
-            showMenu ? <RxCross1 onClick={()=> getMenu()} className={`h-10 w-10 z-50 ${showMenu ? "absolute" : ""}`} />
-            : <RxHamburgerMenu onClick={()=> getMenu()} className="h-10 w-10" />
-          }         
+          {/* My HamMenu Design */}
+          <MotionConfig transition={{ duration: 0.5, ease: "easeInOut" }}>
+            <motion.button
+              onClick={()=>setShowMenu((e) => !e)}
+              initial={false}
+              animate={showMenu ? "open" : "closed"}
+              className={`z-50 relative h-16 w-16 rounded-full bg-white/0 transition-colors cursor-pointer ${props.darkTheme ? "hover:bg-white/20" : "hover:bg-gray-400"}`}>
+                <motion.span
+                  style={{left: "50%", top: "35%", x: "-50%", y: "-50%"}}
+                  className={`absolute h-1 w-10 ${props.darkTheme ? "bg-white" : "bg-black"}`}
+                  variants={{
+                    open: {
+                      rotate: ["0deg", "0deg", "45deg"],
+                      top: ["35%", "50%", "50%"]
+                    },
+                    closed: {
+                      rotate: ["45deg", "0deg", "0deg"],
+                      top: ["50%", "50%", "35%"]
+                    }
+                  }} />
+                
+                <motion.span
+                  style={{left: "50%", top: "50%", x: "-50%", y: "-50%"}}
+                  className={`absolute h-1 w-10 ${props.darkTheme ? "bg-white" : "bg-black"}`}
+                  variants={{
+                    open: {
+                      rotate: ["0deg", "0deg", "-45deg"]
+                    },
+                    closed: {
+                      rotate: ["-45deg", "0deg", "0deg"]
+                    }
+                  }} />
+              
+                <motion.span
+                  style={{left: "calc(50% + 10px)", bottom: "35%", x: "-50%", y: "50%"}}
+                  className={`absolute h-1 w-5 ${props.darkTheme ? "bg-white" : "bg-black"}`}
+                  variants={{
+                    open: {
+                      rotate: ["0deg", "0deg", "45deg"],
+                      left: "50%",
+                      bottom: ["35%", "50%", "50%"]
+                    },
+                    closed: {
+                      rotate: ["45deg", "0deg", "0deg"],
+                      left: "calc(50% + 10px)",
+                      bottom: ["50%", "50%", "35%"]
+                    }
+                  }} />
+            </motion.button>
+          </MotionConfig>
         </div>
 
         {/* My Name */}
         <LinkComponent to="/" content={"Manav"} styles={"font-semibold text-4xl whitespace-nowrap text-purple-800"} >Manav <span className="text-purple-950">Jain</span></LinkComponent>
-        
+
         {/* NavBar Icons */}
         <nav className={`text-xl ${showMenu ? "flex absolute top-0 left-0 h-[100vh] w-[100vw] py-32" : "" } ${props.darkTheme ? "text-gray-300" : "text-black"} ${showMenu ? props.darkTheme ? "bg-black" : "bg-gray-200" : ""} md:flex md:gap-10 md:items-center`}>
           <ul className={`flex md:flex md:items-center gap-10 flex-col md:flex-row ${showMenu ? "flex items-center mx-auto" : "hidden"}`}>  

@@ -12,49 +12,63 @@ import { FaAws } from "react-icons/fa";
 import { IoLogoFirebase } from "react-icons/io5";
 import { SiBlockchaindotcom } from "react-icons/si";
 
-// Importing Local Images
-import Machine from './Images/Machine.gif'
+// Importing Framer Motion
+import { motion } from "framer-motion"
 
 function Skills({ darkTheme }){
+  const iconVariants = (duration) => ({
+    initial: { y: -10 },
+    animate: {
+      y: [10, -10],
+      transition: {
+        duration: duration,
+        ease: "linear",
+        repeat: Infinity,
+        repeatType: "reverse"
+      }
+    }
+  })
+
   return (
     <div className={`${darkTheme ? "text-white" : "text-black"} flex flex-col gap-20 py-20`}>
       {/* What I Do */}
       <div className="flex items-center gap-5">
-        <img 
+        <motion.img
           src="https://raw.githubusercontent.com/TheDudeThatCode/TheDudeThatCode/master/Assets/Developer.gif"
           alt="gif"
+          whileInView={{opacity: 1, x: 0}} initial={{opacity: 0, x:-100}} transition={{duration: 1}}
           className="hidden lg:flex h-full w-[35rem]" />
         
         <div className="flex flex-col gap-10">
           {/* What I Do */}
-          <p className="text-6xl font-semibold">What I do</p>
+          <motion.p whileInView={{opacity: 1, y: 0}} initial={{opacity: 0, y:-100}} transition={{duration: 1, delay: 0.2}} className="text-6xl font-semibold">What I do</motion.p>
 
           {/* A single line */}
-          <p className="text-2xl">CRAZY FULL STACK DEVELOPER WHO WANTS TO EXPLORE EVERY TECH STACK</p>
+          <motion.p whileInView={{opacity:1, x:0}} initial={{opacity:0, x:100}} transition={{duration:1.5}} className="text-2xl">CRAZY FULL STACK DEVELOPER WHO WANTS TO EXPLORE EVERY TECH STACK</motion.p>
 
           {/* Icons */}
-          <section className="text-gray-500 flex gap-5 flex-wrap">
-            <span className="flex flex-col items-center hover:text-orange-600"><FaHtml5 className="size-12" /> HTML</span>
-            <span className="flex flex-col items-center hover:text-blue-700"><FaCss3Alt className="size-12" /> CSS</span>
-            <span className="flex flex-col items-center hover:text-yellow-500"><IoLogoJavascript className="size-12" /> JavaScript</span>
-            <span className="flex flex-col items-center hover:text-blue-600"><RiReactjsFill className="size-12" /> ReactJs</span>
-            <span className="flex flex-col items-center hover:text-blue-800"><SiTypescript className="size-12" /> TypeScript</span>
-            <span className="flex flex-col items-center hover:text-gray-900"><RiNextjsFill className="size-12" /> NextJs</span>
-            <span className="flex flex-col items-center hover:text-green-500"><DiNodejs className="size-12" /> NodeJs</span>
-            <span className="flex flex-col items-center hover:text-red-700"><IoLogoNpm className="size-12" /> npm</span>
-            <span className="flex flex-col items-center hover:text-green-700"><DiMongodb className="size-12" /> MongoDB</span>
-            <span className="flex flex-col items-center hover:text-orange-400"><FaAws className="size-12" /> aws</span>
-            <span className="flex flex-col items-center hover:text-yellow-500"><IoLogoFirebase className="size-12" /> Firebase</span>
-            <span className="flex flex-col items-center hover:text-blue-700"><SiBlockchaindotcom className="size-12" /> BlockChain</span>
-          </section>
+          <motion.section whileInView={{opacity:1, x:0}} initial={{opacity:0, x:100}} transition={{duration:1.5, delay:0.3}} className="text-gray-500 flex gap-5 flex-wrap">
+            <motion.span variants={iconVariants(2.5)} initial="initial" animate="animate" className="flex flex-col items-center hover:text-orange-600"><FaHtml5 className="size-12" /> HTML</motion.span>
+            <motion.span variants={iconVariants(5)} initial="initial" animate="animate" className="flex flex-col items-center hover:text-blue-700"><FaCss3Alt className="size-12" /> CSS</motion.span>
+            <motion.span variants={iconVariants(2.5)} initial="initial" animate="animate" className="flex flex-col items-center hover:text-yellow-500"><IoLogoJavascript className="size-12" /> JavaScript</motion.span>
+            <motion.span variants={iconVariants(5)} initial="initial" animate="animate" className="flex flex-col items-center hover:text-blue-600"><RiReactjsFill className="size-12" /> ReactJs</motion.span>
+            <motion.span variants={iconVariants(2.5)} initial="initial" animate="animate" className="flex flex-col items-center hover:text-blue-800"><SiTypescript className="size-12" /> TypeScript</motion.span>
+            <motion.span variants={iconVariants(5)} initial="initial" animate="animate" className="flex flex-col items-center hover:text-gray-900"><RiNextjsFill className="size-12" /> NextJs</motion.span>
+            <motion.span variants={iconVariants(2.5)} initial="initial" animate="animate" className="flex flex-col items-center hover:text-green-500"><DiNodejs className="size-12" /> NodeJs</motion.span>
+            <motion.span variants={iconVariants(5)} initial="initial" animate="animate" className="flex flex-col items-center hover:text-red-700"><IoLogoNpm className="size-12" /> npm</motion.span>
+            <motion.span variants={iconVariants(2.5)} initial="initial" animate="animate" className="flex flex-col items-center hover:text-green-700"><DiMongodb className="size-12" /> MongoDB</motion.span>
+            <motion.span variants={iconVariants(5)} initial="initial" animate="animate" className="flex flex-col items-center hover:text-orange-400"><FaAws className="size-12" /> aws</motion.span>
+            <motion.span variants={iconVariants(2.5)} initial="initial" animate="animate" className="flex flex-col items-center hover:text-yellow-500"><IoLogoFirebase className="size-12" /> Firebase</motion.span>
+            <motion.span variants={iconVariants(5)} initial="initial" animate="animate" className="flex flex-col items-center hover:text-blue-700"><SiBlockchaindotcom className="size-12" /> BlockChain</motion.span>
+          </motion.section>
 
           {/* ⚡ Content */}
           <section className="text-semibold text-2xl">
-            <p>⚡ Develop highly interactive Front end / User Interfaces for your web applications</p>
+            <motion.p whileInView={{opacity:1, x:0}} initial={{opacity:0, x:100}} transition={{duration:1.5, delay:0.3}}>⚡ Develop highly interactive Front end / User Interfaces for your web applications</motion.p>
 
-            <p>⚡ Progressive Web Applications ( PWA ) in normal and SPA Stacks</p>
+            <motion.p whileInView={{opacity:1, x:0}} initial={{opacity:0, x:100}} transition={{duration:1.5, delay:0.4}}>⚡ Progressive Web Applications ( PWA ) in normal and SPA Stacks</motion.p>
 
-            <p>⚡ Integration of third party services such as Firebase/ AWS</p>
+            <motion.p whileInView={{opacity:1, x:0}} initial={{opacity:0, x:100}} transition={{duration:1.5, delay:0.5}}>⚡ Integration of third party services such as Firebase/ AWS</motion.p>
           </section>
         </div>
       </div>
@@ -63,30 +77,31 @@ function Skills({ darkTheme }){
       <div className="flex gap-10">
         <div className="flex-1 flex flex-col gap-10">
           {/* Headline */}
-          <h1 className="text-6xl font-semibold">Proficiency</h1>
+          <motion.h1 whileInView={{opacity:1, y:0}} initial={{opacity:0, y:-100}} transition={{duration:1.5}} className="text-6xl font-semibold">Proficiency</motion.h1>
 
           {/* These are percentage divs */}
-          <section className="flex flex-col gap-5">
+          <motion.section whileInView={{opacity:1, x:0}} initial={{opacity:0, x:-100}} transition={{duration:1.5}} className="flex flex-col gap-5">
             <span className="text-2xl">Frontend/Design</span>
             <span className={`${darkTheme ? "bg-white" : "bg-white"} h-6 w-full rounded-full relative before:absolute before:top-0 before:content-[''] before:h-6 before:w-[90%] before:bg-green-400 before:rounded-r-full`} />
-          </section>
+          </motion.section>
 
           {/* These are percentage divs */}
-          <section className="flex flex-col gap-5">
+          <motion.section whileInView={{opacity:1, x:0}} initial={{opacity:0, x:-100}} transition={{duration:1.5, delay:0.2}} className="flex flex-col gap-5">
             <span className="text-2xl">Backend</span>
             <span className={`${darkTheme ? "bg-white" : "bg-white"} h-6 w-full rounded-full relative before:absolute before:top-0 before:content-[''] before:h-6 before:w-[70%] before:bg-green-400 before:rounded-r-full`} />
-          </section>
+          </motion.section>
 
           {/* These are percentage divs */}
-          <section className="flex flex-col gap-5">
+          <motion.section whileInView={{opacity:1, x:0}} initial={{opacity:0, x:-100}} transition={{duration:1.5, delay:0.4}} className="flex flex-col gap-5">
             <span className="text-2xl">Programming</span>
           <span className={`${darkTheme ? "bg-white" : "bg-white"} h-6 w-full rounded-full relative before:absolute before:top-0 before:content-[''] before:h-6 before:w-[50%] before:bg-green-400 before:rounded-r-full`} />          
-          </section>
+          </motion.section>
         </div>  
 
-        <img
+        <motion.img
           src="https://cdn.dribbble.com/users/6985884/screenshots/15912038/media/0e74365694dac3776922d1c1e6c13e20.gif"
           alt="gif"
+          whileInView={{opacity:1, x:0}} initial={{opacity:0, x:100}} transition={{duration:1.5}}
           className="hidden lg:flex w-[35rem]" />
       </div>
     </div>

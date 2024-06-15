@@ -2,6 +2,8 @@
 import jiwaji from './Images/jiwaji.webp'
 import nit from './Images/NIT Raipur.png'
 
+// Importing Framer Motion
+import { motion } from "framer-motion"
 
 function Education(){
   // My Education Details
@@ -25,9 +27,9 @@ function Education(){
     <div className='flex flex-col gap-10'>
       {
         // Iterating my education details object
-        object.map(e => {
+        object.map((e,i) => {
           return(
-            <div key={e.college} className='flex flex-col gap-3'>
+            <motion.div key={e.college} whileInView={{opacity: 1, x: 0}} initial={{opacity: 0, x:-100}} transition={{duration: 1, delay: `0.${i}`}} className='flex flex-col gap-3'>
               <div key={e.college} className="flex gap-5 flex-wrap">
                 <img src={e.img} alt={e.college} className='size-36 rounded-full' />
 
@@ -39,7 +41,7 @@ function Education(){
               </div>
 
               <hr className="w-[70%] h-[2px] bg-gray-400 border-none relative before:absolute before:top-0 before:content-[''] before:w-full before:h-[2px] before:bg-purple-700" />
-            </div>
+            </motion.div>
           )
         })
       }
