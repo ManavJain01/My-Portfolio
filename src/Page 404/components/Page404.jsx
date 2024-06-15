@@ -43,8 +43,8 @@ function Page404(){
 
         <div className="text-3xl flex flex-col gap-6 items-center">
           <h2 className="text-green-700">Fun Facts</h2>
-          <p className="text-orange-600">{Objects[random]?.p}</p>
-          <button onClick={() => setRandom(getRandom())} className="w-fit text-red-700 px-5 py-1 rounded-lg hover:shadow-inner hover:shadow-gray-400">More...</button>
+          <p className="text-green-600">{Objects[random]?.p}</p>
+          <button onClick={() => setRandom(getRandom())} className="w-fit text-green-700 px-5 py-1 rounded-lg hover:shadow-inner hover:shadow-gray-400">More...</button>
         </div>
 
       </div>

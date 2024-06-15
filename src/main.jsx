@@ -31,7 +31,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 
         {/* Comment 🢛 */} 
         <Route path="/" element={<Portfolio1 />}>
-          <Route path="/Portfolio1"></Route>
+          <Route path="/Portfolio1" element={<Portfolio1 />}></Route>
         </Route>
 
         {/* Portfolio 2 */}

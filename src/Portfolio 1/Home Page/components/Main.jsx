@@ -51,8 +51,8 @@ function Main(){
       <Navbar ref={{bio, skills, experience, certificates, projects, connect}} darkTheme={darkTheme} setDarkTheme={setDarkTheme} />
 
       {/* Creating my own cursor */}
-      <div id="cursor-dot" className={`${darkTheme ? "xs:bg-[#f5f5dc]" : "xs:bg-gray-700"} xs:z-50 xs:fixed xs:top-[-20px] xs:left-0 xs:w-5 xs:h-5 xs:rounded-full xs:pointer-events-none`} />
-      <div id="cursor-outline" className={`${darkTheme ? "xs:border-[#f5f5dc]" : "xs:border-gray-700"} xs:z-50 xs:fixed xs:left-0 xs:top-[-50px] xs:w-10 xs:h-10 xs:border-2 xs:rounded-full xs:pointer-events-none`} />
+      <div id="cursor-dot" className={`${darkTheme ? "xs:bg-[#f5f5dc]" : "xs:bg-gray-700"} xs:z-[99999] xs:fixed xs:top-[-20px] xs:left-0 xs:w-5 xs:h-5 xs:rounded-full xs:pointer-events-none`} />
+      <div id="cursor-outline" className={`${darkTheme ? "xs:border-[#f5f5dc]" : "xs:border-gray-700"} xs:z-[99999] xs:fixed xs:left-0 xs:top-[-50px] xs:w-10 xs:h-10 xs:border-2 xs:rounded-full xs:pointer-events-none`} />
       
       {/* My Portfolio Main/Body */}
       <main className={`${darkTheme ? "bg-black" : "bg-gray-200"} min-h-[100vh] px-10 xs:px-32`}>

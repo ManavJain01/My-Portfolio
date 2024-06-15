@@ -18,7 +18,7 @@ function Bio(props, ref){
   }
 
   return (
-    <div className={`${props.darkTheme ? "text-white" : "text-black"} flex flex-col gap-20 py-20 pt-48`}>
+    <div className={`${props.darkTheme ? "text-white" : "text-black"} flex flex-col gap-20 py-48 pb-96`}>
       {/* Introduction */}
       <div className="flex flex-col items-center gap-10">
         {/* My Name */}

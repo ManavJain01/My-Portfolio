@@ -30,11 +30,11 @@ function Skills({ darkTheme }){
   })
 
   return (
-    <div className={`${darkTheme ? "text-white" : "text-black"} flex flex-col gap-20 py-20`}>
+    <div className={`${darkTheme ? "text-white" : "text-black"} flex flex-col gap-20 py-20 pb-96`}>
       {/* What I Do */}
       <div className="flex items-center gap-5">
         <motion.img
-          src="https://raw.githubusercontent.com/TheDudeThatCode/TheDudeThatCode/master/Assets/Developer.gif"
+          src="https://media4.giphy.com/media/ZFiBmGVClrgxt02N9X/source.gif"
           alt="gif"
           whileInView={{opacity: 1, x: 0}} initial={{opacity: 0, x:-100}} transition={{duration: 1}}
           className="hidden lg:flex h-full w-[35rem]" />
@@ -99,7 +99,7 @@ function Skills({ darkTheme }){
         </div>  
 
         <motion.img
-          src="https://cdn.dribbble.com/users/6985884/screenshots/15912038/media/0e74365694dac3776922d1c1e6c13e20.gif"
+          src="https://syndrometech.net/wp-content/uploads/2020/12/Digital-Transformation-and-Automation_Syndrome_N.gif"
           alt="gif"
           whileInView={{opacity:1, x:0}} initial={{opacity:0, x:100}} transition={{duration:1.5}}
           className="hidden lg:flex w-[35rem]" />

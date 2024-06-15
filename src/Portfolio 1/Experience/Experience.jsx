@@ -15,7 +15,7 @@ export default function Experience({ darkTheme }) {
   ]
 
   return (
-    <div className={`py-20 flex flex-col gap-20 ${darkTheme ? "text-white" : "text-black"}`}>
+    <div className={`py-20 pb-96 flex flex-col gap-20 ${darkTheme ? "text-white" : "text-black"}`}>
       {/* Experience */}
       <motion.h1 whileInView={{opacity:1, y:0}} initial={{opacity:0, y:-100}} transition={{duration:1.5}} className="text-6xl font-semibold text-center md:text-start">My Experiences</motion.h1>
       

@@ -34,7 +34,7 @@ function Navbar( props, ref ) {
   const refArray = [ref.bio, ref.skills, ref.experience, ref.certificates, ref.projects, ref.connect]
 
   return (
-    <div className={`${props.darkTheme ? "text-white" : "text-black"} z-50 flex justify-between items-center gap-5 h-[10vh] w-[100vw] bg-transparent backdrop-blur-md fixed px-10 pr-40 rounded-b-lg`}>
+    <div className={`${props.darkTheme ? "text-white" : "text-black"} z-[99999] flex justify-between items-center gap-5 h-[10vh] w-[100vw] bg-transparent backdrop-blur-md fixed px-10 pr-40 rounded-b-lg`}>
       <div className='flex gap-10 xs:gap-20 items-center'>
         {/* For Small screens, Our Ham-Menu Icon */}
         <div className={`${props.darkTheme ? "text-white" : "text-black"} cursor-pointer block md:hidden`}>
