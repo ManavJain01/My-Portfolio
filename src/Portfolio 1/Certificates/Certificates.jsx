@@ -43,7 +43,7 @@ export default function Certificates({ darkTheme }) {
   };
 
   return (
-    <div className={`${darkTheme ? "text-white" : "text-black"} flex flex-col gap-20 py-20 pb-96`}>
+    <div className={`flex flex-col gap-20 py-20 pb-96`}>
       {/* Certificates */}
       <motion.h1 whileInView={{opacity:1, y:0}} initial={{opacity:0, y:-100}} transition={{duration:1.5}} className="text-6xl font-semibold">Certificates</motion.h1>
 

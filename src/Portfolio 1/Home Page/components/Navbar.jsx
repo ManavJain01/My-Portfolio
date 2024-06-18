@@ -44,7 +44,7 @@ function Navbar( props, ref ) {
               onClick={()=>setShowMenu((e) => !e)}
               initial={false}
               animate={showMenu ? "open" : "closed"}
-              className={`z-50 relative h-16 w-16 rounded-full bg-white/0 transition-colors cursor-pointer ${props.darkTheme ? "hover:bg-white/20" : "hover:bg-gray-400"}`}>
+              className={`z-50 relative h-16 w-16 rounded-full bg-white/0 transition-colors cursor-none ${props.darkTheme ? "hover:bg-white/20" : "hover:bg-gray-400"}`}>
                 <motion.span
                   style={{left: "50%", top: "35%", x: "-50%", y: "-50%"}}
                   className={`absolute h-1 w-10 ${props.darkTheme ? "bg-white" : "bg-black"}`}
@@ -91,10 +91,10 @@ function Navbar( props, ref ) {
         </div>
 
         {/* My Name */}
-        <LinkComponent to="/" content={"Manav"} styles={"font-semibold text-4xl whitespace-nowrap text-purple-800"} >Manav <span className="text-purple-950">Jain</span></LinkComponent>
+        <motion.h1 whileInView={{opacity: 1, x: 0}} initial={{opacity: 0, x:-200}} transition={{duration: 1.7}} className="font-semibold text-4xl whitespace-nowrap text-purple-800">Manav <span className="text-purple-950">Jain</span></motion.h1>
 
         {/* NavBar Icons */}
-        <nav className={`text-xl ${showMenu ? "flex absolute top-0 left-0 h-[100vh] w-[100vw] py-32" : "" } ${props.darkTheme ? "text-gray-300" : "text-black"} ${showMenu ? props.darkTheme ? "bg-black" : "bg-gray-200" : ""} md:flex md:gap-10 md:items-center`}>
+        <motion.nav whileInView={{opacity: 1, x: 0}} initial={{opacity: 0, x:200}} transition={{duration: 1.5}} className={`text-xl ${showMenu ? "animate-navAnimation flex absolute top-0 left-0 h-[100vh] w-[100vw] py-32" : "" } ${props.darkTheme ? "text-gray-300" : "text-black"} ${showMenu ? props.darkTheme ? "bg-black" : "bg-gray-200" : ""} md:flex md:gap-10 md:items-center`}>
           <ul className={`flex md:flex md:items-center gap-10 flex-col md:flex-row ${showMenu ? "flex items-center mx-auto" : "hidden"}`}>  
             {["Bio", "Skills","Experience", "Certificates", "Projects", "Connect"].map((e, i) =>
               <li key={e} onClick={() => {scrollHandler(refArray[i]); setShowMenu(false)}} className={`${showMenu? "py-2 hover:bg-blue-400 hover:text-white w-[100vw] text-center active:bg-blue-500" : "px-2 py-1 rounded-md"} ${showMenu === false ? props.darkTheme ? "hover:bg-purple-600 hover:text-white" : "hover:text-purple-600 hover:bg-gray-300" : ""}`}>{e}</li>
@@ -103,7 +103,7 @@ function Navbar( props, ref ) {
             {/* Dark Theme Toggle */}
             <li><DarkTheme darkTheme={props.darkTheme} setDarkTheme={props.setDarkTheme} /></li>
           </ul>
-        </nav>
+        </motion.nav>
 
       </div>
       

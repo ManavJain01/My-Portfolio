@@ -15,7 +15,7 @@ import ContactForm from "./ContactForm";
 
 function Connect({ darkTheme }){
   return (
-    <div className={`${darkTheme ? "text-white" : "text-black"} flex flex-col gap-5 text-center py-20`}>
+    <div className={`flex flex-col gap-5 text-center py-20`}>
       {/* General Information */}
       <div className="flex flex-col items-start gap-2 text-xl font-semibold mb-10">
         <p className="hover:text-gray-500">Gwalior, India</p>
@@ -32,10 +32,10 @@ function Connect({ darkTheme }){
         <span>Nit474011gwl@gmail.com</span>
       </section>
       
-      <ContactForm darkTheme={darkTheme} />
+      <ContactForm />
 
       {/* Let's be social */}
-      <motion.div whileInView={{opacity: 1, x: 0}} initial={{opacity: 0, x:-100}} transition={{duration: 1}} className="flex flex-col gap-2 items-center">
+      <motion.div whileInView={{opacity: 1, y: 0}} initial={{opacity: 0, y:100}} transition={{duration: 1}} className="flex flex-col gap-2 items-center">
         <p before="Let's be social" className="transition ease-in-out delay-150 hover:-translate-y-1 text-4xl font-bold hover:bg-gradient-to-r hover:from-pink-500 hover:via-white hover:to-yellow-600 hover:text-transparent bg-clip-text">Let's be social</p>
 
         <section className="flex gap-5">

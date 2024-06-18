@@ -30,7 +30,7 @@ function Education(){
         object.map((e,i) => {
           return(
             <motion.div key={e.college} whileInView={{opacity: 1, x: 0}} initial={{opacity: 0, x:-100}} transition={{duration: 1, delay: `0.${i}`}} className='flex flex-col gap-3'>
-              <div key={e.college} className="flex gap-5 flex-wrap">
+              <div key={e.college} className="peer flex gap-5 flex-wrap">
                 <img src={e.img} alt={e.college} className='size-36 rounded-full' />
 
                 <div className="text-2xl flex flex-col gap-3">
@@ -40,7 +40,7 @@ function Education(){
                 </div>
               </div>
 
-              <hr className="w-[70%] h-[2px] bg-gray-400 border-none relative before:absolute before:top-0 before:content-[''] before:w-full before:h-[2px] before:bg-purple-700" />
+              <hr className="w-[70%] peer-hover:w-[100%] transition-all duration-1000 h-[2px] bg-gray-400 border-none relative before:absolute before:top-0 before:content-[''] before:w-full before:h-[2px] before:bg-purple-700" />
             </motion.div>
           )
         })

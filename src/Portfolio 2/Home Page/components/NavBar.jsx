@@ -6,25 +6,30 @@ import { RxCross1 } from "react-icons/rx";
 import DarkTheme from "./DarkTheme";
 
 // Importing React Packages
-import { useState } from "react";
+import { useState, forwardRef } from "react";
 
-export default function NavBar(props) {
+function NavBar(props, ref) {
   // NavBar Options
   const navOptions = [
     {
-      name: "Bio"
+      name: "Bio",
+      ref: ref.bio
     },
     {
-      name: "Skills"
+      name: "Skills",
+      ref: ref.skills
     },
     {
-      name: "Certificates"
+      name: "Certificates",
+      ref: ref.certificates
     },
     {
-      name: "Projects"
+      name: "Projects",
+      ref: ref.projects
     },
     {
-      name: "Connect"
+      name: "Connect",
+      ref: ref.connect
     }
   ]
 
@@ -44,9 +49,14 @@ export default function NavBar(props) {
     }
   }
 
+  // Creating Scroll Handler 
+  const scrollHandler = (elemRef) => {
+    window.scrollTo({ top: elemRef.current.offsetTop, behaviour: "smooth" })
+  }
+
   return (
-    <div className="sticky top-0 flex justify-end">
-      <nav className={`relative w-full md:w-[80%] lg:w-[70%] px-10 py-2 flex justify-between rounded-sm shadow-md ${props.darkTheme ? "bg-gray-900 shadow-gray-800" : "bg-gray-400 bg-opacity-30 shadow-gray-400"}`}>
+    <div className="z-[99999] sticky top-0 flex justify-end">
+      <nav className={`relative w-full md:w-[80%] lg:w-[70%] px-10 py-2 flex justify-between backdrop-blur-sm rounded-sm shadow-md ${props.darkTheme ? "bg-gray-900 shadow-gray-800" : "bg-gray-400 bg-opacity-30 shadow-gray-400"}`}>
         <span className="text-4xl whitespace-nowrap">Manav Jain</span>
 
         <div className="flex gap-10">
@@ -55,7 +65,7 @@ export default function NavBar(props) {
               .filter((e,i) => menu ? e : i < 1)
               .map((e,i) => {
                 return(
-                  <li key={i} className={`px-5 py-1 rounded-lg hover:shadow-inner hover:shadow-gray-950`}>{e.name}</li>
+                  <li key={i} onClick={() => {scrollHandler(e.ref)}} className={`px-5 py-1 rounded-lg hover:shadow-inner hover:shadow-gray-950 cursor-pointer`}>{e.name}</li>
                 )
             })}
             <li><DarkTheme darkTheme={props.darkTheme} setDarkTheme={props.setDarkTheme} /></li>
@@ -72,3 +82,5 @@ export default function NavBar(props) {
     </div>
   )
 }
+
+export default forwardRef(NavBar);

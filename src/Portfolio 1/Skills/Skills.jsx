@@ -15,7 +15,7 @@ import { SiBlockchaindotcom } from "react-icons/si";
 // Importing Framer Motion
 import { motion } from "framer-motion"
 
-function Skills({ darkTheme }){
+function Skills(){
   const iconVariants = (duration) => ({
     initial: { y: -10 },
     animate: {
@@ -30,7 +30,7 @@ function Skills({ darkTheme }){
   })
 
   return (
-    <div className={`${darkTheme ? "text-white" : "text-black"} flex flex-col gap-20 py-20 pb-96`}>
+    <div className={`flex flex-col gap-20 py-20 pb-96`}>
       {/* What I Do */}
       <div className="flex items-center gap-5">
         <motion.img
@@ -82,19 +82,19 @@ function Skills({ darkTheme }){
           {/* These are percentage divs */}
           <motion.section whileInView={{opacity:1, x:0}} initial={{opacity:0, x:-100}} transition={{duration:1.5}} className="flex flex-col gap-5">
             <span className="text-2xl">Frontend/Design</span>
-            <span className={`${darkTheme ? "bg-white" : "bg-white"} h-6 w-full rounded-full relative before:absolute before:top-0 before:content-[''] before:h-6 before:w-[90%] before:bg-green-400 before:rounded-r-full`} />
+            <span className={`bg-white h-6 w-full rounded-full relative before:absolute before:top-0 before:content-[''] before:h-6 before:w-[90%] before:bg-green-400 before:rounded-r-full`} />
           </motion.section>
 
           {/* These are percentage divs */}
           <motion.section whileInView={{opacity:1, x:0}} initial={{opacity:0, x:-100}} transition={{duration:1.5, delay:0.2}} className="flex flex-col gap-5">
             <span className="text-2xl">Backend</span>
-            <span className={`${darkTheme ? "bg-white" : "bg-white"} h-6 w-full rounded-full relative before:absolute before:top-0 before:content-[''] before:h-6 before:w-[70%] before:bg-green-400 before:rounded-r-full`} />
+            <span className={`bg-white h-6 w-full rounded-full relative before:absolute before:top-0 before:content-[''] before:h-6 before:w-[70%] before:bg-green-400 before:rounded-r-full`} />
           </motion.section>
 
           {/* These are percentage divs */}
           <motion.section whileInView={{opacity:1, x:0}} initial={{opacity:0, x:-100}} transition={{duration:1.5, delay:0.4}} className="flex flex-col gap-5">
             <span className="text-2xl">Programming</span>
-          <span className={`${darkTheme ? "bg-white" : "bg-white"} h-6 w-full rounded-full relative before:absolute before:top-0 before:content-[''] before:h-6 before:w-[50%] before:bg-green-400 before:rounded-r-full`} />          
+          <span className={`bg-white h-6 w-full rounded-full relative before:absolute before:top-0 before:content-[''] before:h-6 before:w-[50%] before:bg-green-400 before:rounded-r-full`} />          
           </motion.section>
         </div>  
 

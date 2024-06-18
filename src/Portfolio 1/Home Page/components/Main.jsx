@@ -55,9 +55,9 @@ function Main(){
       <div id="cursor-outline" className={`${darkTheme ? "xs:border-[#f5f5dc]" : "xs:border-gray-700"} xs:z-[99999] xs:fixed xs:left-0 xs:top-[-50px] xs:w-10 xs:h-10 xs:border-2 xs:rounded-full xs:pointer-events-none`} />
       
       {/* My Portfolio Main/Body */}
-      <main className={`${darkTheme ? "bg-black" : "bg-gray-200"} min-h-[100vh] px-10 xs:px-32`}>
-        <div ref={bio}><Bio ref={{connect}} darkTheme={darkTheme} /></div>
-        <div ref={skills}><Skills darkTheme={darkTheme} /></div>
+      <main className={`${darkTheme ? "bg-black text-white" : "bg-gray-200 text-black"} min-h-[100vh] px-10 xs:px-32 transition-all duration-1000`}>
+        <div ref={bio}><Bio ref={{connect}} /></div>
+        <div ref={skills}><Skills /></div>
         <div ref={experience}><Experience darkTheme={darkTheme} /></div>
         <div ref={certificates}><Certificates darkTheme={darkTheme} /></div>
         <div ref={projects}><Projects darkTheme={darkTheme} /></div>

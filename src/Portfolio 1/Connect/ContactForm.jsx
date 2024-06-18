@@ -3,9 +3,9 @@
 // Importing react icons
 import { CgArrowLongRight } from "react-icons/cg";
 
-function ContactForm({ darkTheme }){
+function ContactForm(){
   return (
-    <form action="https://api.web3forms.com/submit" method="POST" className={`${darkTheme ? "text-black" : "text-white"} flex flex-col gap-5 items-end`}>
+    <form action="https://api.web3forms.com/submit" method="POST" className={`flex flex-col gap-5 items-end`}>
       <div className="w-full flex flex-col gap-5">
         {/* Replace with your Access Key */}
         <input type="hidden" name="access_key" value="0c878e5f-80d6-4475-abf0-345c75cb6041" />

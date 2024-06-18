@@ -12,15 +12,13 @@ export default {
         'xs': '431px'
       },
       keyframes: {
-        'trans-right':{
-          '0%':{ transform: 'translateX(-50px)',
-            opacity: '0'
-           },
-          '100%':{ transform: 'translateX(0)' },
+        navAnimation: {
+          '0%': { translate: '0% -100%' },
+          '100%': { translate: '0% 0%' },
         }
       },
-      animation:{
-        'trans-right':'trans-right 1.5s ease-in-out'
+      animation: {
+        navAnimation: 'navAnimation 1.5s ease-in-out 1',
       }
     },
   },

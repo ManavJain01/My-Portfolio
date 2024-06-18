@@ -11,7 +11,7 @@ function Projects({ darkTheme }){
   const category = ["MERN STACK PROJECTS"]
 
   return (
-    <div className={`${darkTheme ? "text-white" : "text-black"} py-20 pb-96`}>
+    <div className={`py-20 pb-96`}>
       <div>
         {
           category.map((item, i) => {
