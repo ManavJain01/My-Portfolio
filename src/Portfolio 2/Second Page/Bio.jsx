@@ -3,7 +3,7 @@ import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 
 export default function Bio() {
   return (
-    <div className="min-h-lvh flex flex-col items-center justify-between">
+    <div className="min-h-lvh pt-28 flex flex-col items-center justify-between">
       <h1 className="text-4xl font-bold">Bio</h1>
       <h1 className="text-4xl font-bold">End</h1>
     </div>

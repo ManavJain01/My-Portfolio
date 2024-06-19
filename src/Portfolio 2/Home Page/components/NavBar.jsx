@@ -12,10 +12,6 @@ function NavBar(props, ref) {
   // NavBar Options
   const navOptions = [
     {
-      name: "Bio",
-      ref: ref.bio
-    },
-    {
       name: "Skills",
       ref: ref.skills
     },
@@ -51,13 +47,14 @@ function NavBar(props, ref) {
 
   // Creating Scroll Handler 
   const scrollHandler = (elemRef) => {
-    window.scrollTo({ top: elemRef.current.offsetTop, behaviour: "smooth" })
+    elemRef.current?.scrollIntoView({behavior: 'smooth'});
+    setMenu(false);
   }
 
   return (
     <div className="z-[99999] sticky top-0 flex justify-end">
       <nav className={`relative w-full md:w-[80%] lg:w-[70%] px-10 py-2 flex justify-between backdrop-blur-sm rounded-sm shadow-md ${props.darkTheme ? "bg-gray-900 shadow-gray-800" : "bg-gray-400 bg-opacity-30 shadow-gray-400"}`}>
-        <span className="text-4xl whitespace-nowrap">Manav Jain</span>
+        <span onClick={() => {scrollHandler(ref.bio)}} className="text-4xl whitespace-nowrap cursor-pointer">Manav Jain</span>
 
         <div className="flex gap-10">
           <ul className={`md:flex gap-5 items-center ${menu? "z-50 absolute right-0 top-14 p-10 w-[15rem] bg-gray-400 backdrop-blur-lg bg-opacity-30 flex flex-col border-2 rounded-sm rounded-b-md" : "hidden"} ${menu? props.darkTheme ? "border-gray-600" : "border-gray-400" : ""}`}>

@@ -1,11 +1,10 @@
 // Importing local Files
 import NavBar from './NavBar'
 import Footer from './Footer'
-import Bio from '../../Bio/Bio'
-import Skills from '../../Skills/Skills'
 
 // Importing React Packages
 import { useRef, useState } from 'react'
+import InnerMain from '../../Second Page/InnerMain'
 
 export default function Main() {
   // Creating references for different sections
@@ -26,10 +25,7 @@ export default function Main() {
         <NavBar ref={{bio, skills, certificates, projects, connect}} darkTheme={darkTheme} setDarkTheme={setDarkTheme} />
 
         {/* Main Body */}
-        <div className="flex-1">
-          <div ref={bio}><Bio /></div>
-          <div ref={skills}><Skills /></div>
-        </div>
+        <InnerMain ref={{bio, skills, certificates, projects, connect}} />
 
         {/* Footer */}
         <Footer />
