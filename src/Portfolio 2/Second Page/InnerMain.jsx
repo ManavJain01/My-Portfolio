@@ -12,7 +12,7 @@ function InnerMain(props, ref) {
 
   return (
     <div className="flex-1">
-      <div ref={ref.bio}><Bio /></div>
+      <div ref={ref.bio}><Bio darkTheme={props.darkTheme} /></div>
       <div ref={ref.skills}><Skills /></div>
       <div ref={ref.certificates}><Certificates /></div>
       <div ref={ref.projects}><Projects /></div>
