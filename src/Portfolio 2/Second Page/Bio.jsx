@@ -28,12 +28,11 @@ export default function Bio({darkTheme}) {
   const [LeftId, setLeftId] = useState(Data.length - 1)
   const [RightId, setRightId] = useState(1)
 
-  // UseEffect
-  // useEffect(() => {
+  useEffect(() => {
     
-  //   const timerId = setInterval(() => nextBtn(), 3000)
-  //     return () => clearInterval(timerId)
-  // });
+    const timerId = setInterval(() => nextBtn(), 3000)
+      return () => clearInterval(timerId)
+  });
 
   const nextBtn = () => {
     if (LeftId === Data.length - 1) {
