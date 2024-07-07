@@ -5,6 +5,7 @@ import Bio from '../../Bio/Bio.jsx'
 import Skills from '../../Skills/Skills.jsx'
 import Experience from '../../Experience/Experience.jsx';
 import Certificates from '../../Certificates/Certificates.jsx'
+import Contributions from '../../Contributions/components/Contributions.jsx'
 import Projects from '../../Projects/Projects.jsx'
 import Connect from '../../Connect/Connect.jsx'
 
@@ -41,6 +42,7 @@ function Main(){
   const skills = useRef()
   const experience = useRef()
   const certificates = useRef()
+  const contributions = useRef()
   const projects = useRef()
   const connect = useRef()
 
@@ -48,7 +50,7 @@ function Main(){
     <div className='xs:cursor-none overflow-x-hidden'>
       
       {/* NavBar/ Header */}
-      <Navbar ref={{bio, skills, experience, certificates, projects, connect}} darkTheme={darkTheme} setDarkTheme={setDarkTheme} />
+      <Navbar ref={{bio, skills, experience, certificates, contributions, projects, connect}} darkTheme={darkTheme} setDarkTheme={setDarkTheme} />
 
       {/* Creating my own cursor */}
       <div id="cursor-dot" className={`${darkTheme ? "xs:bg-[#f5f5dc]" : "xs:bg-gray-700"} xs:z-[99999] xs:fixed xs:top-[-20px] xs:left-0 xs:w-5 xs:h-5 xs:rounded-full xs:pointer-events-none`} />
@@ -60,6 +62,7 @@ function Main(){
         <div ref={skills}><Skills /></div>
         <div ref={experience}><Experience darkTheme={darkTheme} /></div>
         <div ref={certificates}><Certificates darkTheme={darkTheme} /></div>
+        {/* <div ref={contributions}><Contributions darkTheme={darkTheme} /></div> */}
         <div ref={projects}><Projects darkTheme={darkTheme} /></div>
         <div ref={connect}><Connect darkTheme={darkTheme} /></div>
       </main>

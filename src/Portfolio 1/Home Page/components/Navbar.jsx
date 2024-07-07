@@ -31,7 +31,7 @@ function Navbar( props, ref ) {
   }
 
   // Array of referrences of navbar
-  const refArray = [ref.bio, ref.skills, ref.experience, ref.certificates, ref.projects, ref.connect]
+  const refArray = [ref.bio, ref.skills, ref.experience, ref.certificates, /*ref.contributions,*/ ref.projects, ref.connect]
 
   return (
     <div className={`${props.darkTheme ? "text-white" : "text-black"} z-[99999] flex justify-between items-center gap-5 h-[10vh] w-[100vw] bg-transparent backdrop-blur-md fixed px-10 pr-40 rounded-b-lg`}>
@@ -96,7 +96,7 @@ function Navbar( props, ref ) {
         {/* NavBar Icons */}
         <motion.nav whileInView={{opacity: 1, y: 0}} initial={{opacity: 0, y:-50}} transition={{duration: 1.5}} className={`text-xl ${showMenu ? "animate-navAnimation flex absolute top-0 left-0 h-[100vh] w-[100vw] py-32" : "" } ${props.darkTheme ? "text-gray-300" : "text-black"} ${showMenu ? props.darkTheme ? "bg-black" : "bg-gray-200" : ""} md:flex md:gap-10 md:items-center`}>
           <ul className={`flex md:flex md:items-center gap-10 flex-col md:flex-row ${showMenu ? "flex items-center mx-auto" : "hidden"}`}>  
-            {["Bio", "Skills","Experience", "Certificates", "Projects", "Connect"].map((e, i) =>
+            {["Bio", "Skills","Experience", "Certificates", /*"Contributions", */ "Projects", "Connect"].map((e, i) =>
               <li key={e} onClick={() => {scrollHandler(refArray[i]); setShowMenu(false)}} className={`${showMenu? "py-2 hover:bg-blue-400 hover:text-white w-[100vw] text-center active:bg-blue-500" : "px-2 py-1 rounded-md"} ${showMenu === false ? props.darkTheme ? "hover:bg-purple-600 hover:text-white" : "hover:text-purple-600 hover:bg-gray-300" : ""}`}>{e}</li>
             )}
 

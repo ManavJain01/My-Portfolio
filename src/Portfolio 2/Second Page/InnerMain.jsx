@@ -2,6 +2,8 @@
 import Bio from './Bio'
 import Skills from './Skills'
 import Certificates from './Certificates'
+import Contributions from './Contributions'
+import Experience from './Experience'
 import Projects from './Projects'
 import Connect from './Connect'
 
@@ -15,6 +17,8 @@ function InnerMain(props, ref) {
       <div ref={ref.bio}><Bio darkTheme={props.darkTheme} /></div>
       <div ref={ref.skills}><Skills /></div>
       <div ref={ref.certificates}><Certificates /></div>
+      {/* <div ref={ref.contributions}><Contributions /></div> */}
+      {/* <div ref={ref.experience}><Experience /></div> */}
       <div ref={ref.projects}><Projects /></div>
       <div ref={ref.connect}><Connect /></div>
     </div>

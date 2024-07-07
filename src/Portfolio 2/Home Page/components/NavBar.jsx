@@ -19,6 +19,14 @@ function NavBar(props, ref) {
       name: "Certificates",
       ref: ref.certificates
     },
+    // {
+    //   name: "Contributions",
+    //   ref: ref.contributions
+    // },
+    // {
+    //   name: "Experience",
+    //   ref: ref.experience
+    // },
     {
       name: "Projects",
       ref: ref.projects
