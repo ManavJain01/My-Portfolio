@@ -10,5 +10,11 @@
     "link": "https://food-delivery-app-phi-ten.vercel.app/",
     "img": "https://mern-projects-amber.vercel.app/assets/Food%20Delivery%20App-B2qqpkch.png",
     "category": "MERN STACK PROJECTS"
+  },
+  {
+    "name": "Web Streaming",
+    "link": "https://webstreaming.netlify.app/",
+    "img": "https://mern-projects-amber.vercel.app/assets/webStreaming-B3EoU8Z2.png",
+    "category": "MERN STACK PROJECTS"
   }
 ]

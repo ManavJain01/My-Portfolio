@@ -24,7 +24,7 @@ function Projects({ darkTheme }){
                     .filter((e, i) => e.category === item)
                     .map((e,i) => {
                       return(
-                        <Link key={i} to={e.link} className={`rounded-md shadow-2xl hover:shadow-green-400 active:hover:shadow-blue-400 cursor-none hover:scale-[120%] ${darkTheme ? "shadow-purple-400" : "shadow-gray-400"}`}>
+                        <Link key={i} to={e.link} className={`rounded-md shadow-2xl hover:shadow-green-400 active:hover:shadow-blue-400 cursor-none hover:scale-[120%] duration-700 ${darkTheme ? "shadow-purple-400" : "shadow-gray-400"}`}>
                           <img
                             src={e.img}
                             alt="project"
