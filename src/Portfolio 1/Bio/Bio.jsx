@@ -43,7 +43,7 @@ function Bio(props, ref){
               Contact Me
               <LuExternalLink />
             </button>
-            <a href="../../Resume/resume.txt" download="My Resume" className="bg-purple-800 font-semibold text-xl flex gap-5 items-center py-2 px-3 rounded-lg hover:bg-transparent hover:text-purple-800">
+            <a href="../../Resume/My_Resume_1.pdf" download="My Resume" className="bg-purple-800 font-semibold text-xl flex gap-5 items-center py-2 px-3 rounded-lg hover:bg-transparent hover:text-purple-800">
               Download My Resume
               <FaDownload />
             </a>

@@ -1,5 +1,5 @@
 // Importing local images
-import CodeSoftOfferLetter from '../../Experience/Image/CodeSoft_OfferLetter.png'
+import CodSoft from '../../Experience/Image/CodSoft Internship.png'
 
 // Importing Framer Motion
 import { motion } from "framer-motion"
@@ -10,7 +10,7 @@ export default function Experience({ darkTheme }) {
       company: "CodeSoft",
       period: "1 Month Internship",
       joining: "15 June 2024",
-      img: CodeSoftOfferLetter,
+      img: CodSoft,
     }
   ]
 
