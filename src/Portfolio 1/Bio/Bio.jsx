@@ -7,6 +7,7 @@ import { LuExternalLink } from "react-icons/lu";
 
 // Importing Local Files
 import Education from './Education'
+import myResume from '../../Resume/My_Resume_1.pdf'
 
 // Importing React Packages
 import { forwardRef } from 'react';
@@ -43,7 +44,7 @@ function Bio(props, ref){
               Contact Me
               <LuExternalLink />
             </button>
-            <a href="../../Resume/My_Resume_1.pdf" download="My Resume" className="bg-purple-800 font-semibold text-xl flex gap-5 items-center py-2 px-3 rounded-lg hover:bg-transparent hover:text-purple-800">
+            <a href={myResume} download="My Resume" className="bg-purple-800 font-semibold text-xl flex gap-5 items-center py-2 px-3 rounded-lg hover:bg-transparent hover:text-purple-800">
               Download My Resume
               <FaDownload />
             </a>

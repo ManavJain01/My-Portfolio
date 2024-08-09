@@ -14,7 +14,7 @@ import { useEffect, useRef, useState } from 'react';
 
 function Main(){
   // Dark Theme State
-  const [darkTheme, setDarkTheme] = useState(false)
+  const [darkTheme, setDarkTheme] = useState(localStorage.getItem("theme") || false);
 
   // Creating our own cursor
   useEffect(()=>{

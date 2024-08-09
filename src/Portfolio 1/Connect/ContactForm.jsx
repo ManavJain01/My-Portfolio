@@ -40,11 +40,10 @@ function ContactForm(){
         </section>
 
         <section className="flex-1 flex">
-            <input
-            type="text"
+          <textarea
             name="thinking"
             placeholder="What's on your mind?"
-            className="text-black flex-1 h-48 py-1 px-3 rounded-sm outline-none" />
+            className="text-xl text-black flex-1 h-28 py-1 px-3 rounded-sm outline-none placeholder:text-3xl" />
         </section>
       </div>
 

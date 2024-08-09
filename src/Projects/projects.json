@@ -16,5 +16,11 @@
     "link": "https://webstreaming.netlify.app/",
     "img": "https://mern-projects-amber.vercel.app/assets/webStreaming-B3EoU8Z2.png",
     "category": "MERN STACK PROJECTS"
+  },
+  {
+    "name": "Chat Dapp",
+    "link": "",
+    "img": "https://more-projects-page.vercel.app/assets/Chat_DAPP-5m1e6Hv7.png",
+    "category": "BLOCKCHAIN PROJECTS"
   }
 ]
