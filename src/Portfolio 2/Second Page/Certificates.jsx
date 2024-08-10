@@ -66,7 +66,7 @@ export default function Certificates() {
         <motion.div whileInView={{opacity: 1, x: 0}} initial={{opacity: 0, x:100}} transition={{duration: 1}} className="h-[50rem] flex flex-col gap-10 overflow-hidden">{
           certificates.map((e,i) => {
             return(
-              <div>
+              <div key={i}>
                 <img
                   src={e.certificate}
                   alt="certificates"

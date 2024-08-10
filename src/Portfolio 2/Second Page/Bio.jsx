@@ -93,7 +93,7 @@ export default function Bio({darkTheme}) {
       scale: 2.5,
       backgroundImage: 'url(' + Data[LeftId] + ')',
       zIndex: '4',
-      boxShadow: 'unset',
+      boxShadow: 'none',
       transition: {
         type: 'spring',
         duration: 1,
@@ -105,7 +105,7 @@ export default function Bio({darkTheme}) {
       opacity: 1,
       filter: "brightness(40%)",
       scale: 2.5,
-      boxShadow: 'unset',
+      boxShadow: 'none',
       zIndex: '3',
       transition: {
         type: 'spring',
