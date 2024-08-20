@@ -19,7 +19,7 @@ export default function Main() {
   const scrollContainerRef = useRef(null);
 
   // UseStates
-  const [darkTheme, setDarkTheme] = useState(true)
+  const [darkTheme, setDarkTheme] = useState(localStorage.getItem("theme") || false)
 
   return (
     <div className={`relative h-lvh font-serif flex transition-all duration-1000 ${darkTheme ? "bg-black text-white" : "bg-gray-300 text-black"}`}>

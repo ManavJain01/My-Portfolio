@@ -40,11 +40,11 @@ function Bio(props, ref){
 
           {/* 2 Buttons */}
           <motion.section whileInView={{opacity: 1, x: 0}} initial={{opacity: 0, x:-100}} transition={{duration: 1, delay: 0.5}} className="w-full flex gap-5 justify-between items-center flex-wrap">
-            <button onClick={() => scrollHandler(ref.connect)} className="bg-purple-800 font-semibold text-xl flex gap-5 items-center py-2 px-3 rounded-lg hover:bg-transparent hover:text-purple-800">
+            <button onClick={() => scrollHandler(ref.connect)} className="bg-purple-800 font-semibold text-xl flex gap-5 items-center py-2 px-3 rounded-lg hover:bg-transparent hover:text-purple-800 cursor-none">
               Contact Me
               <LuExternalLink />
             </button>
-            <a href={myResume} download="My Resume" className="bg-purple-800 font-semibold text-xl flex gap-5 items-center py-2 px-3 rounded-lg hover:bg-transparent hover:text-purple-800">
+            <a href={myResume} download="My Resume" className="bg-purple-800 font-semibold text-xl flex gap-5 items-center py-2 px-3 rounded-lg hover:bg-transparent hover:text-purple-800 cursor-none">
               Download My Resume
               <FaDownload />
             </a>

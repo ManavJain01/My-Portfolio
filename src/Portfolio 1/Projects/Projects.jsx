@@ -37,13 +37,13 @@ function Projects({ darkTheme }){
       <div className="flex gap-5">
         {category.map((e,i) => {
           return(
-            <button key={i} onClick={() => setProjectType(e)} className={`text-2xl text-white bg-orange-500 px-5 py-2 rounded-lg ${projectType === e && "bg-orange-700"} duration-300`}>{e}</button>
+            <button key={i} onClick={() => setProjectType(e)} className={`text-2xl text-white bg-orange-500 px-5 py-2 rounded-lg ${projectType === e && "bg-orange-700"} duration-300 cursor-none`}>{e}</button>
           )
         })}
       </div>
 
       <div className="flex flex-col gap-20">
-        <motion.div whileInView={{opacity:1, scale:"100%"}} initial={{opacity:0, scale:0}} transition={{duration:1.5}} className="flex flex-wrap gap-10 justify-around">
+        <motion.div whileInView={{opacity:1, scale:"100%"}} initial={{opacity:0, scale:0}} transition={{duration:1.5}} className="flex flex-wrap gap-20 /justify-around">
           {
             projects
             .filter((e) => e.category === projectType)
@@ -63,7 +63,7 @@ function Projects({ darkTheme }){
             })
           }
           
-          <Link to="https://more-projects-page.vercel.app/" className={`h-56 w-80 rounded-md shadow-2xl hover:shadow-green-400 active:hover:shadow-blue-400 cursor-none hover:scale-[120%] duration-700 ${darkTheme ? "shadow-purple-400" : "shadow-gray-400"}`}>
+          <Link to="https://more-projects-page.vercel.app/" className={`h-64 w-80 rounded-md shadow-2xl hover:shadow-green-400 active:hover:shadow-blue-400 cursor-none hover:scale-[120%] duration-700 ${darkTheme ? "shadow-purple-400" : "shadow-gray-400"}`}>
             <div className={`${colors[colorIndex]} p-5 flex flex-col gap-5 items-center`}>
               <GrProjects className="size-36" />
               <h1 className="font-bold text-2xl">More Projects</h1>

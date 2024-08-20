@@ -47,7 +47,7 @@ function ContactForm(){
         </section>
       </div>
 
-      <button type="submit" className="bg-yellow-500 flex flex-col items-center justify-center w-20 h-20 py-1 px-3 rounded-full rounded-br-none hover:bg-yellow-600 hover:text-white">
+      <button type="submit" className="bg-yellow-500 flex flex-col items-center justify-center w-20 h-20 py-1 px-3 rounded-full rounded-br-none hover:bg-yellow-600 hover:text-white cursor-none">
         <span>Send IT</span>
         <CgArrowLongRight className="size-10 -mt-3" />
       </button>
