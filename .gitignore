@@ -23,6 +23,8 @@ dist-ssr
 *.sln
 *.sw?
 
+# env file
+.env
 
 # local files
 website i follow.txt

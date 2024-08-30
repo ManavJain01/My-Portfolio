@@ -1,0 +1,71 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#body-java{
+  background: linear-gradient(to right, rgb(182, 244, 146), rgb(51, 139, 147));
+  font-family: monospace;
+}
+
+#header-java{
+  width: 100vw;
+  height: 20vh;
+  background: linear-gradient(109.6deg, rgb(170, 255, 169) 11.2%, rgb(17, 255, 189) 91.1%);
+  font-size: 150%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#header-java h1{
+  color: darkblue;
+}
+
+#main-java{
+  min-width: 100vw;
+  min-height: 60vh;
+  padding: 0 5%;
+  display: flex;
+  justify-content: center;
+}
+
+.div-wrapper{
+  min-width: 80vw;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.div-wrapper a{
+  margin: 4% 2%;
+  text-decoration: none;
+  color: darkblue;
+}
+
+.divs{
+  background: linear-gradient(to top, #96fbc4 0%, #f9f586 100%);
+  height: 20rem;
+  width: 20rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30% 0;
+  box-shadow: 0px 0px 50px green;
+  border-radius: 10px;
+}
+
+.divs:hover{
+  cursor: pointer;
+  opacity: 0.8;
+  transform: scale(1.2, 1.2);
+}
+
+#main-java div h1{
+  text-decoration: underline;
+}
+
+#footer-java{
+  background: linear-gradient(109.6deg, rgb(170, 255, 169) 11.2%, rgb(17, 255, 189) 91.1%);
+}

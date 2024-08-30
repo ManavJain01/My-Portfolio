@@ -1,0 +1,56 @@
+{
+  "my info" : {
+    "name" : "Manav Jain",
+    "field" : "A Full Stack Developer",
+    "portfolio" : "https://manavjain-portfolio.vercel.app/",
+    "img" : "https://manavjain-portfolio.vercel.app/assets/mine1-GlnPSswU.jpeg",
+    "projects" : [ "MERN Projects", "BlockChain Projects", "More Projects" ],
+    "social" : {
+      "github" : "https://github.com/manavjain01",
+      "linkedin" : "https://www.linkedin.com/in/manav-jain-02a54824a/",
+      "leetcode" : "https://leetcode.com/u/manavjain01/"
+    },
+    "buymyacoffee" : "https://buymeacoffee.com/manavjain01"
+  },
+  "projects" : {
+    "Vanilla Projects" : {
+      "link" : "https://manavjain01.github.io/My-Mini-Projects/MainFile/"
+
+    },
+    "Reactjs Projects" : {
+      "link" : "https://manavjain01.github.io/My-React-Projects/#/Body"
+
+    },
+    "MERN Projects" : {
+      "link" : "/Projects/NextJs",
+      "projects" : [
+
+      ]
+    },
+    "Next Js Projects" : {
+      "link" : "/Projects/NextJs",
+      "projects" : [
+        {
+          "project" : "Next Authentication",
+          "img" : "src/Data/images/NextJs/NextAuth.png",
+          "p1" : "A Next Js Based Authentication Application"
+        }
+      ]
+    },
+    "Machine Learning Projects" : {
+      "link" : "https://manavjain01.github.io/MachineLearning/MainFile/#"
+
+    },
+    "Blockchain Projects" : {
+      "link" : "https://manavjain01.github.io/BlockChain-Projects/MainFile/"
+
+    },
+    "Java Projects" : {
+      "link" : "/Projects/Java"
+      
+    },
+    "DSA Problems" : {
+      "link" : "/Projects/DSA-Problems"
+    }
+  }
+}
