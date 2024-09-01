@@ -1,5 +1,5 @@
 // Importing React Packages
-import React from 'react'
+import { StrictMode } from 'react'
 import ReactDOM from 'react-dom/client'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
@@ -20,6 +20,15 @@ import Page404 from '../Page 404/components/Page404.jsx'
 
 //      * Projects *
 import Projects from '@/Projects/Home Page/Index.jsx'
+  // React
+import React from '@/Projects/Techs/React/React'
+import React_FrontPage from '@/Projects/Techs/React/my-projects/Dice Game/components/FrontPage'
+import React_Playarea from '@/Projects/Techs/React/my-projects/Dice Game/components/Playarea'
+import React_FoodyZone from '@/Projects/Techs/React/my-projects/Foody Zone/components/Body'
+import React_ContactApp from '@/Projects/Techs/React/my-projects/Contact App/components/Body'
+import React_TodoRedux from '@/Projects/Techs/React/my-projects/Todo with Redux/components/App'
+import React_OtpAuth from '@/Projects/Techs/React/my-projects/OTP Authentication/components/OtpAuth'
+  // MERN
 import MERN from '@/Projects/Techs/MERN/MERN'
 import MERN_Main from '@/Projects/Techs/MERN/Main'
 import MERN_StudentDetails from '@/Projects/Techs/MERN/my-projects/Student Details/StudentDetails'
@@ -31,7 +40,7 @@ import DSA from '@/Projects/Techs/DSA Problems/DSA'
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
+  <StrictMode>
     <BrowserRouter>
       <Routes>
         {/* Main Page */}
@@ -51,6 +60,15 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 
         {/* Projects */}
         <Route path="/Projects" element={<Projects />}></Route>
+          {/* React */}
+        <Route path="/Projects/React" element={<React />}></Route>
+        <Route path="/Projects/React/Dice/FrontPage" element={<React_FrontPage />} />
+        <Route path="/Projects/React/Dice/Playarea" element={<React_Playarea />} />
+        <Route path="/Projects/React/FoodyZone" element={<React_FoodyZone />} />
+        <Route path="/Projects/React/ContactApp" element={<React_ContactApp />} />
+        <Route path="/Projects/React/Todo-with-redux" element={<React_TodoRedux />} />
+        <Route path="/Projects/React/Otp-Authentication" element={<React_OtpAuth />} />
+          {/* MERN */}
         <Route path="/Projects/MERN" element={<MERN />}>
           <Route index element={<MERN_Main />} />
           <Route path="StudentDetails" element={<MERN_StudentDetails />} />
@@ -65,5 +83,5 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path="/*" element={<Page404 />}></Route>
       </Routes>
     </BrowserRouter>
-  </React.StrictMode>,
+  </StrictMode>,
 )

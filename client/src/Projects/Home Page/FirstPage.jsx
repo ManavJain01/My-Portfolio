@@ -99,8 +99,9 @@ const Index = () => {
             {
               Object.keys(data.projects).map((e, i) =>{
                 return(
-                  <Link key={i} to={data.projects[e].link} className="bg-[#ffffff1a] text-xl text-center h-[10rem] p-5 py-12 border-2 border-[#ffffff80] border-b-[#ffffff33] border-r-[#ffffff33] rounded-md">
-                    {e}
+                  <Link key={i} to={data.projects[e].link} className="group relative bg-[#ffffff1a] text-xl text-center h-[10rem] p-5 py-12 border-2 border-[#ffffff80] border-b-[#ffffff33] border-r-[#ffffff33] rounded-md">
+                    <span>{e}</span>
+                    <span className="absolute left-48 top-20 hidden group-hover:block text-sm">Go to this page</span>
                   </Link>
                 )
               })

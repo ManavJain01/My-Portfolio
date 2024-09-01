@@ -18,11 +18,11 @@
 
     },
     "Reactjs Projects" : {
-      "link" : "https://manavjain01.github.io/My-React-Projects/#/Body"
+      "link" : "/Projects/React"
 
     },
     "MERN Projects" : {
-      "link" : "/Projects/NextJs",
+      "link" : "/Projects/MERN",
       "projects" : [
 
       ]
