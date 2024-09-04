@@ -65,7 +65,7 @@ const Index = () => {
           </div>
 
           <Link
-            to={data['my info'].portfolio}
+            to={data['my info']?.portfolio}
             className="absolute -bottom-2 left-24 text-lg text-blue-700 hover:underline
               p-1 border-[1px] border-[#ffffff80] border-b-[#ffffff33] border-r-[#ffffff33] rounded-lg shadow-lg
               duration-700

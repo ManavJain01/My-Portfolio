@@ -36,18 +36,18 @@ function Skills(){
         <motion.img
           src="https://media4.giphy.com/media/ZFiBmGVClrgxt02N9X/source.gif"
           alt="gif"
-          whileInView={{opacity: 1, x: 0}} initial={{opacity: 0, x:-100}} transition={{duration: 1}}
+          whileInView={{opacity: 1, x: 0}} initial={{opacity: 0, x:-100}} transition={{duration: 0.5}}
           className="hidden lg:flex h-full w-[35rem]" />
         
         <div className="flex flex-col gap-10">
           {/* What I Do */}
-          <motion.p whileInView={{opacity: 1, y: 0}} initial={{opacity: 0, y:-100}} transition={{duration: 1, delay: 0.2}} className="text-6xl font-semibold">What I do</motion.p>
+          <motion.p whileInView={{opacity: 1, x: 0}} initial={{opacity: 0, x:100}} transition={{duration: 0.5, delay: 0.2}} className="text-6xl font-semibold">What I do</motion.p>
 
           {/* A single line */}
-          <motion.p whileInView={{opacity:1, x:0}} initial={{opacity:0, x:100}} transition={{duration:1.5}} className="text-2xl">CRAZY FULL STACK DEVELOPER WHO WANTS TO EXPLORE EVERY TECH STACK</motion.p>
+          <motion.p whileInView={{opacity:1, x:0}} initial={{opacity:0, x:100}} transition={{duration:1}} className="text-2xl">CRAZY FULL STACK DEVELOPER WHO WANTS TO EXPLORE EVERY TECH STACK</motion.p>
 
           {/* Icons */}
-          <motion.section whileInView={{opacity:1, x:0}} initial={{opacity:0, x:100}} transition={{duration:1.5, delay:0.3}} className="text-gray-500 flex gap-5 flex-wrap">
+          <motion.section whileInView={{opacity:1, x:0}} initial={{opacity:0, x:100}} transition={{duration:1, delay:0.3}} className="text-gray-500 flex gap-5 flex-wrap">
             <motion.span variants={iconVariants(2.5)} initial="initial" animate="animate" className="flex flex-col items-center hover:text-orange-600"><FaHtml5 className="size-12" /> HTML</motion.span>
             <motion.span variants={iconVariants(5)} initial="initial" animate="animate" className="flex flex-col items-center hover:text-blue-700"><FaCss3Alt className="size-12" /> CSS</motion.span>
             <motion.span variants={iconVariants(2.5)} initial="initial" animate="animate" className="flex flex-col items-center hover:text-yellow-500"><IoLogoJavascript className="size-12" /> JavaScript</motion.span>
@@ -64,11 +64,11 @@ function Skills(){
 
           {/* ⚡ Content */}
           <section className="text-semibold text-2xl">
-            <motion.p whileInView={{opacity:1, x:0}} initial={{opacity:0, x:100}} transition={{duration:1.5, delay:0.3}}>⚡ Develop highly interactive Front end / User Interfaces for your web applications</motion.p>
+            <motion.p whileInView={{opacity:1, x:0}} initial={{opacity:0, x:100}} transition={{duration:1, delay:0.3}}>⚡ Develop highly interactive Front end / User Interfaces for your web applications</motion.p>
 
-            <motion.p whileInView={{opacity:1, x:0}} initial={{opacity:0, x:100}} transition={{duration:1.5, delay:0.4}}>⚡ Progressive Web Applications ( PWA ) in normal and SPA Stacks</motion.p>
+            <motion.p whileInView={{opacity:1, x:0}} initial={{opacity:0, x:100}} transition={{duration:1, delay:0.4}}>⚡ Progressive Web Applications ( PWA ) in normal and SPA Stacks</motion.p>
 
-            <motion.p whileInView={{opacity:1, x:0}} initial={{opacity:0, x:100}} transition={{duration:1.5, delay:0.5}}>⚡ Integration of third party services such as Firebase/ AWS</motion.p>
+            <motion.p whileInView={{opacity:1, x:0}} initial={{opacity:0, x:100}} transition={{duration:1, delay:0.5}}>⚡ Integration of third party services such as Firebase/ AWS</motion.p>
           </section>
         </div>
       </div>
@@ -77,31 +77,30 @@ function Skills(){
       <div className="flex gap-10">
         <div className="flex-1 flex flex-col gap-10">
           {/* Headline */}
-          <motion.h1 whileInView={{opacity:1, y:0}} initial={{opacity:0, y:-100}} transition={{duration:1.5}} className="text-6xl font-semibold">Proficiency</motion.h1>
+          <h1 className="text-6xl font-semibold">Proficiency</h1>
 
           {/* These are percentage divs */}
-          <motion.section whileInView={{opacity:1, x:0}} initial={{opacity:0, x:-100}} transition={{duration:1.5}} className="flex flex-col gap-5">
+          <section className="flex flex-col gap-5">
             <span className="text-2xl">Frontend/Design</span>
             <span className={`bg-white h-6 w-full rounded-full relative before:absolute before:top-0 before:content-[''] before:h-6 before:w-[90%] before:bg-green-400 before:rounded-r-full`} />
-          </motion.section>
+          </section>
 
           {/* These are percentage divs */}
-          <motion.section whileInView={{opacity:1, x:0}} initial={{opacity:0, x:-100}} transition={{duration:1.5, delay:0.2}} className="flex flex-col gap-5">
+          <section className="flex flex-col gap-5">
             <span className="text-2xl">Backend</span>
             <span className={`bg-white h-6 w-full rounded-full relative before:absolute before:top-0 before:content-[''] before:h-6 before:w-[70%] before:bg-green-400 before:rounded-r-full`} />
-          </motion.section>
+          </section>
 
           {/* These are percentage divs */}
-          <motion.section whileInView={{opacity:1, x:0}} initial={{opacity:0, x:-100}} transition={{duration:1.5, delay:0.4}} className="flex flex-col gap-5">
+          <section className="flex flex-col gap-5">
             <span className="text-2xl">Programming</span>
           <span className={`bg-white h-6 w-full rounded-full relative before:absolute before:top-0 before:content-[''] before:h-6 before:w-[50%] before:bg-green-400 before:rounded-r-full`} />          
-          </motion.section>
+          </section>
         </div>  
 
-        <motion.img
+        <img
           src="https://syndrometech.net/wp-content/uploads/2020/12/Digital-Transformation-and-Automation_Syndrome_N.gif"
           alt="gif"
-          whileInView={{opacity:1, x:0}} initial={{opacity:0, x:100}} transition={{duration:1.5}}
           className="hidden lg:flex w-[35rem]" />
       </div>
     </div>

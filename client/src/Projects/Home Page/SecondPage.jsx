@@ -15,6 +15,12 @@ import DiceGame from './images/Second Page/DiceGame.png'
 import FoodyZone from './images/Second Page/foody zone.png'
 import Firebase from './images/Second Page/firebase contact app.png'
 
+// Importing React Packages
+import { Link } from 'react-router-dom'
+
+// Importing local files
+import data from "@/Data/api.json"
+
 export default function Index() {
   // Carousel Settings
   const settings = {
@@ -88,7 +94,7 @@ export default function Index() {
 
       <div className="relative flex flex-col gap-10 p-12">
         <div className="flex flex-col gap-10">
-          <a href="https://manavjain01.github.io/My-Mini-Projects/MainFile/" className="font-bold text-5xl w-fit">Vanilla Projects</a>
+          <Link to={data.projects["Vanilla Projects"].link} className="font-bold text-5xl w-fit">Vanilla Projects</Link>
 
           {/* Carousal */}
           <Slider {...settings}>
@@ -106,7 +112,7 @@ export default function Index() {
         </div>
 
         <div className="flex flex-col gap-10">
-          <a href="https://manavjain01.github.io/My-React-Projects/#/Body" className="font-bold text-5xl w-fit">React Projects</a>
+          <Link to={data.projects["Reactjs Projects"].link} className="font-bold text-5xl w-fit">React Projects</Link>
         
           {/* Carousal */}
           <Slider {...settings}>

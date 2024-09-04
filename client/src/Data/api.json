@@ -2,13 +2,20 @@
   "my info" : {
     "name" : "Manav Jain",
     "field" : "A Full Stack Developer",
+    "personal info": {
+      "address" : "Gwalior, India",
+      "phone" : ["+91-8269-543-303", "+91-9171-678-303"],
+      "email" : ["Nit474011gwl@gmail.com"]
+    },
     "portfolio" : "https://manavjain-portfolio.vercel.app/",
+    "allProjects": "/Projects",
     "img" : "https://manavjain-portfolio.vercel.app/assets/mine1-GlnPSswU.jpeg",
     "projects" : [ "MERN Projects", "BlockChain Projects", "More Projects" ],
     "social" : {
       "github" : "https://github.com/manavjain01",
       "linkedin" : "https://www.linkedin.com/in/manav-jain-02a54824a/",
-      "leetcode" : "https://leetcode.com/u/manavjain01/"
+      "leetcode" : "https://leetcode.com/u/manavjain01/",
+      "instagram": "https://www.instagram.com/manv_jain/"
     },
     "buymyacoffee" : "https://buymeacoffee.com/manavjain01"
   },
@@ -48,9 +55,6 @@
     "Java Projects" : {
       "link" : "/Projects/Java"
       
-    },
-    "DSA Problems" : {
-      "link" : "/Projects/DSA-Problems"
     }
   }
 }

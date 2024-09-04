@@ -17,12 +17,11 @@ export default function Experience({ darkTheme }) {
   return (
     <div className={`py-20 pb-96 flex flex-col gap-20`}>
       {/* Experience */}
-      <motion.h1 whileInView={{opacity:1, y:0}} initial={{opacity:0, y:-100}} transition={{duration:1.5}} className="text-6xl font-semibold text-center md:text-start">My Experiences</motion.h1>
-      
+      <h1 className="text-6xl font-semibold text-center md:text-start">My Experiences</h1>
       <div className="flex flex-wrap">
         {myExperience.map((e,i) => {
           return(
-            <motion.div whileInView={{opacity:1, scale:"100%"}} initial={{opacity:0, scale:0}} transition={{duration:1.5, delay:`0.${i}`}} key={i} className={`flex flex-col rounded-md shadow-lg ${darkTheme ? "bg-purple-700 shadow-purple-400" : "text-purple-700"}`}>
+            <div key={i} className={`flex flex-col rounded-md shadow-lg ${darkTheme ? "bg-purple-700 shadow-purple-400" : "text-purple-700"}`}>
               <img
                 src={e.img}
                 alt={`my Experience ${i+1}`}
@@ -33,10 +32,14 @@ export default function Experience({ darkTheme }) {
                 <span className="text-center">{e.period}</span>
                 <span>{e.joining}</span>
               </div>
-            </motion.div>
+            </div>
           )
         })}
       </div>
     </div>
   )
 }
+
+// Not using now
+{/* whileInView={{opacity:1, x:0}} initial={{opacity:0, x:-100}} transition={{duration:1}} */}
+// whileInView={{opacity:1, scale:"100%"}} initial={{opacity:0, scale:0}} transition={{duration:1, delay:`0.${i}`}}

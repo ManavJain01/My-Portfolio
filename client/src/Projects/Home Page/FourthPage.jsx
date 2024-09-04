@@ -6,6 +6,9 @@ import "slick-carousel/slick/slick-theme.css"
 // Importing React Packages
 import { Link } from 'react-router-dom'
 
+// Importing local files
+import data from "@/Data/api.json"
+
 export default function FourthPage() {
   // Carousel Settings
   const settings = {
@@ -36,7 +39,7 @@ export default function FourthPage() {
 /*
 <div className="relative flex flex-col gap-10 p-12">
         <div className="flex flex-col gap-10">
-          <Link to="/NextJs" className="font-bold text-5xl w-fit">NextJs Projects</Link>
+          <Link to={data.projects["Next Js Projects"].link} className="font-bold text-5xl w-fit">NextJs Projects</Link>
 
           {/* Carousal * /}
           <Slider {...settings}>
@@ -54,7 +57,7 @@ export default function FourthPage() {
         </div>
 
         <div className="flex flex-col gap-10">
-          <Link to="/ReactNative" className="font-bold text-5xl w-fit">React Native Projects</Link>
+          <Link to={data.projects["React Native Projects"].link} className="font-bold text-5xl w-fit">React Native Projects</Link>
         
           {/* Carousal * /}
           <Slider {...settings}>

@@ -65,28 +65,28 @@ export default function Certificates({ darkTheme }) {
   return (
     <div className={`flex flex-col gap-20 py-20 pb-96`}>
       {/* Certificates */}
-      <motion.h1 whileInView={{opacity:1, y:0}} initial={{opacity:0, y:-100}} transition={{duration:1.5}} className="text-6xl font-semibold">Certificates</motion.h1>
+      <h1 className="text-6xl font-semibold">Certificates</h1>
 
       {/* Certificate */}
-      <Link to={selectCerti.link} className={`h-[40rem] hidden sm:flex shadow-2xl cursor-none ${darkTheme ? "shadow-purple-400" : "shadow-gray-400"}`}>
-        <motion.img
-          src={selectCerti.certificate}
-          alt="ibm"
-          whileInView={{opacity:1, scale:"100%"}} initial={{opacity:0, scale:0}} transition={{duration:1.5}}
-          className={`w-full`} />
-      </Link>
+      <div>
+        <Link to={selectCerti.link} className={`h-[40rem] hidden sm:flex shadow-2xl cursor-none ${darkTheme ? "shadow-purple-400" : "shadow-gray-400"}`}>
+          <img
+            src={selectCerti.certificate}
+            alt="ibm"
+            className={`w-full`} />
+        </Link>
+      </div>
 
       {/* Carousal */}
       <Carousel responsive={responsive}>
       {
         certiArr.map((e, i) =>{
           return(
-            <motion.img
+            <img
               key={i}
               src={e.certificate}
               alt="ibm"
               onClick={() => setSelectCerti({certificate: e.certificate, link: e.link})}
-              whileInView={{opacity:1, x:0}} initial={{opacity:0, x:-100}} transition={{duration:1.5}}
               className={`h-72 w-80 shadow-2xl ${darkTheme ? "shadow-purple-400" : "shadow-gray-400"}`} />
           )
         })

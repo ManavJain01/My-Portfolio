@@ -29,7 +29,7 @@ function Education(){
         // Iterating my education details object
         object.map((e,i) => {
           return(
-            <motion.div key={e.college} whileInView={{opacity: 1, x: 0}} initial={{opacity: 0, x:-100}} transition={{duration: 1, delay: `0.${i}`}} className='flex flex-col gap-3'>
+            <motion.div key={e.college} whileInView={{opacity: 1, x: 0}} initial={{opacity: 0, x:-100}} transition={{duration: 0.5, delay: `0.${i}`}} className='flex flex-col gap-3'>
               <div key={e.college} className="peer flex gap-5 flex-wrap">
                 <img src={e.img} alt={e.college} className='size-36 rounded-full' />
 

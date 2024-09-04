@@ -11,6 +11,9 @@ import { Link } from 'react-router-dom'
 import { motion } from "framer-motion"
 import { useEffect, useState } from "react";
 
+// Importing Local files
+import data from '@/Data/api.json'
+
 function Projects({ darkTheme }){
   // useState
   const [colorIndex, setColorIndex] = useState(0);
@@ -32,7 +35,7 @@ function Projects({ darkTheme }){
 
   return (
     <div className={`flex flex-col gap-10 py-20 pb-64`}>
-      <motion.h1 whileInView={{opacity:1, y:0}} initial={{opacity:0, y:-100}} transition={{duration:1.5}} className="text-6xl font-semibold text-center md:text-start">Projects</motion.h1>
+      <h1 className="text-6xl font-semibold text-center md:text-start">Projects</h1>
       
       <div className="flex gap-5">
         {category.map((e,i) => {
@@ -43,7 +46,7 @@ function Projects({ darkTheme }){
       </div>
 
       <div className="flex flex-col gap-20">
-        <motion.div whileInView={{opacity:1, scale:"100%"}} initial={{opacity:0, scale:0}} transition={{duration:1.5}} className="flex flex-wrap gap-20 /justify-around">
+        <div className="flex flex-wrap gap-20 /justify-around">
           {
             projects
             .filter((e) => e.category === projectType)
@@ -63,13 +66,13 @@ function Projects({ darkTheme }){
             })
           }
           
-          <Link to="https://more-projects-page.vercel.app/" className={`h-64 w-80 rounded-md shadow-2xl hover:shadow-green-400 active:hover:shadow-blue-400 cursor-none hover:scale-[120%] duration-700 ${darkTheme ? "shadow-purple-400" : "shadow-gray-400"}`}>
+          <Link to={data["my info"]?.allProjects} className={`h-64 w-80 rounded-md shadow-2xl hover:shadow-green-400 active:hover:shadow-blue-400 cursor-none hover:scale-[120%] duration-700 ${darkTheme ? "shadow-purple-400" : "shadow-gray-400"}`}>
             <div className={`${colors[colorIndex]} p-5 flex flex-col gap-5 items-center`}>
               <GrProjects className="size-36" />
               <h1 className="font-bold text-2xl">More Projects</h1>
             </div>
           </Link>
-        </motion.div>
+        </div>
       </div>
     </div>
   )

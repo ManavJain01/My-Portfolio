@@ -10,6 +10,12 @@ import NextAuth from './images/Third Page/NextAuth.png'
 import WebStreaming from './images/Third Page/webStreaming.png'
 import ChatDAPP from './images/Third Page/Chat_DAPP.png'
 
+// Importing React Packages
+import { Link } from 'react-router-dom'
+
+// Importing local files
+import data from "@/Data/api.json"
+
 const Index = () => {
   // Carousel Settings
   const settings = {
@@ -74,7 +80,7 @@ const Index = () => {
       <div className="relative flex flex-col gap-10 p-12">
 
         <div className="flex flex-col gap-10">
-          <a href="https://mern-projects-amber.vercel.app/" className="text-5xl font-bold w-fit">MERN Projects</a>
+          <Link to={data.projects["MERN Projects"].link} className="text-5xl font-bold w-fit">MERN Projects</Link>
           
           <div>
             {/* Carousal */}
@@ -94,7 +100,7 @@ const Index = () => {
         </div>
 
         <div className="flex flex-col gap-10">
-          <a href="https://manavjain01.github.io/BlockChain-Projects/MainFile/" className="text-5xl font-bold w-fit">BlockChain Projects</a>
+          <Link to={data.projects["Blockchain Projects"].link} className="text-5xl font-bold w-fit">BlockChain Projects</Link>
           
           <div>
             {/* Carousal */}
