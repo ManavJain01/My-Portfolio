@@ -20,6 +20,8 @@ import Page404 from '../Page 404/components/Page404.jsx'
 
 //      * Projects *
 import Projects from '@/Projects/Home Page/Index.jsx'
+  // Vanilla
+import Vanilla from '@/Projects/Techs/Vanilla/Vanilla'
   // React
 import React from '@/Projects/Techs/React/React'
 import React_FrontPage from '@/Projects/Techs/React/my-projects/Dice Game/components/FrontPage'
@@ -60,6 +62,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 
         {/* Projects */}
         <Route path="/Projects" element={<Projects />}></Route>
+          {/* Vanilla */}
+        <Route path="/Projects/Vanilla" element={<Vanilla />}></Route>
           {/* React */}
         <Route path="/Projects/React" element={<React />}></Route>
         <Route path="/Projects/React/Dice/FrontPage" element={<React_FrontPage />} />

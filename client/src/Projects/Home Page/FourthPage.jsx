@@ -39,7 +39,7 @@ export default function FourthPage() {
 /*
 <div className="relative flex flex-col gap-10 p-12">
         <div className="flex flex-col gap-10">
-          <Link to={data.projects["Next Js Projects"].link} className="font-bold text-5xl w-fit">NextJs Projects</Link>
+          <Link to={data.projects["Next Js Projects"].link} className="font-bold text-5xl w-fit hover:text-blue-900">NextJs Projects</Link>
 
           {/* Carousal * /}
           <Slider {...settings}>
@@ -57,7 +57,7 @@ export default function FourthPage() {
         </div>
 
         <div className="flex flex-col gap-10">
-          <Link to={data.projects["React Native Projects"].link} className="font-bold text-5xl w-fit">React Native Projects</Link>
+          <Link to={data.projects["React Native Projects"].link} className="font-bold text-5xl w-fit hover:text-blue-900">React Native Projects</Link>
         
           {/* Carousal * /}
           <Slider {...settings}>

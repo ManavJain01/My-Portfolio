@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Carousel Slides</title>
+    <link rel="stylesheet" href="./carousel.css">
+  </head>
+  <body>
+    <ul>
+      <li><img src="https://picsum.photos/id/236/1000/500" class="slide" /></li>
+      <li><img src="https://picsum.photos/id/237/1000/500" class="slide" /></li>
+      <li><img src="https://picsum.photos/id/238/1000/500" class="slide" /></li>
+      <li><img src="https://picsum.photos/id/239/1000/500" class="slide" /></li>
+    </ul>
+
+    <div class="nav">
+      <button id="prev" onclick="goPrev(this)">Prev</button>
+      <button id="next" onclick="goNext(this)">Next</button>
+    </div>
+
+    <script>
+      const slides = document.querySelectorAll(".slide")
+      let counter = 0;
+      slides.forEach(
+        (slide, index) => {
+          slide.style.left = `${index * 100}%`
+        }
+      )
+
+      const slideImage = () => {
+        slides.forEach(
+          (slide) => {
+            slide.style.transform = `translateX(-${counter*100}%)`
+          }
+        )
+      }
+
+      const goPrev = (e) => {
+        const next = document.getElementById("next")
+        if(counter == 0){
+          e.style.backgroundColor = "red";
+          return
+        }
+        next.style.backgroundColor = "green"
+        counter--;
+        slideImage()
+      }
+
+      const goNext = (e) => {
+        const prev = document.getElementById("prev")
+        if(counter == slides.length-1){
+          e.style.backgroundColor = "red"
+          return
+        }
+        prev.style.backgroundColor = "green"
+        counter++;
+        slideImage()
+      }
+    </script>
+  </body>
+</html>

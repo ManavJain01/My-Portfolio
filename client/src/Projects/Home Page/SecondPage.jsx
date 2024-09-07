@@ -94,7 +94,7 @@ export default function Index() {
 
       <div className="relative flex flex-col gap-10 p-12">
         <div className="flex flex-col gap-10">
-          <Link to={data.projects["Vanilla Projects"].link} className="font-bold text-5xl w-fit">Vanilla Projects</Link>
+          <Link to={data.projects["Vanilla Projects"].link} className="font-bold text-5xl w-fit hover:text-blue-900">Vanilla Projects</Link>
 
           {/* Carousal */}
           <Slider {...settings}>
@@ -112,7 +112,7 @@ export default function Index() {
         </div>
 
         <div className="flex flex-col gap-10">
-          <Link to={data.projects["Reactjs Projects"].link} className="font-bold text-5xl w-fit">React Projects</Link>
+          <Link to={data.projects["Reactjs Projects"].link} className="font-bold text-5xl w-fit hover:text-blue-900">React Projects</Link>
         
           {/* Carousal */}
           <Slider {...settings}>

@@ -1,0 +1,164 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header{
+  width: 100vw;
+  min-height: 10vh;
+}
+
+header nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav h1{
+  margin: 0 20px;
+  white-space: nowrap;
+}
+
+header nav ul{
+  width: 100vw;
+  text-align: right;
+  list-style: none;
+}
+
+header nav ul li{
+  display: inline-block;
+  margin: 25px;
+}
+
+header nav ul li button{
+  border: none;
+}
+
+header nav ul li img{
+  width: 20px;
+  object-fit: contain;
+  object-position: center;
+  display: none;
+}
+
+#hambtn:hover{
+  cursor: pointer;
+}
+
+main{
+  background-color: aqua;
+  width: 100vw;
+  min-height: 70vh;
+  position: relative;
+}
+
+
+main div{
+  display: none;
+  background-color: rgb(56, 51, 51);
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 400px;
+  height: 400px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+main div ul{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+main div ul li{
+  white-space: nowrap;
+  list-style: none;
+  margin: 25px;
+  padding: 5px 50px;
+  padding-bottom: 20px;
+  position: relative;
+  border-bottom: 2px solid white;
+}
+
+main div ul li button{
+  background-color: transparent;
+  color: white;
+}
+
+footer{
+  background-color: black;
+  min-height: 20vh;
+  width: 100vw;
+}
+
+.parentdiv{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5% 5%;
+}
+
+
+footer ul{
+  list-style: none;
+}
+
+footer li{
+  padding: 5px;
+}
+
+footer p{
+  color: white;
+}
+
+footer a{
+  color: bisque;
+  text-decoration: none;
+}
+
+@media all and (max-width: 300px){
+  .li{
+    display: none;
+  }
+
+  header nav ul li img{
+    display: block;
+  }
+
+  .parentdiv{
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .childdiv{
+    margin: 10px 0;
+  }
+}
+
+
+@media all and (orientation:portrait){
+  .li{
+    display: none;
+  }
+
+  header nav ul li img{
+    display: block;
+  }
+
+  header div{
+    display: none;
+  }
+
+  .parentdiv{
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .childdiv{
+    margin: 10px 0;
+  }
+}

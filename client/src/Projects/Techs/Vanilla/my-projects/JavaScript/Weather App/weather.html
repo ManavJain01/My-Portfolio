@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Weather App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-[#222]">
+    <div class="bg-red-600 text-[#fff] w-[70%] max-w[470px] m-20 rounded-lg px-20 py-10 text-center">
+      <div class="w-[100%] flex align-center justify-between">
+        <input type="text" placeholder="Enter your city name" spellcheck="false" id="input" class="bg-[#ebfffc] text-[#555] px-10 py-3 rounded-full flex flex-1 mr-7">
+        <button id="btn" class="rounded-xl w-16 h-16"><img src="./Images/search.png" class=""></button>
+      </div>
+
+      <div id="error" class="hidden text-left ml-10 text-lg mt-5">
+        <p>Invalid city name</p>
+      </div>
+
+      <div id="weather" class="hidden">
+        <img src="./Images/rain.png" id="weather-icon" class="w-[200px] mt-20">
+        <h1 class="text-6xl" id="temp">22°c</h1>
+        <h2 class="text-3xl" id="city">New York</h2>
+
+        <div class="flex align-center justify-between mt-16">
+          <div class="flex align-center text-left">
+            <img src="./Images/humidity.png" class="w-10 object-contain">
+            <div class="ml-1">
+              <p id="humidity">50%</p>
+              <p>Humidity</p>
+            </div>
+          </div>
+
+          <div class="flex align-center text-left">
+            <img src="./Images/wind.png" class="w-10 object-contain">
+            <div class="ml-2">
+              <p id="speed">15 km/h</p>
+              <p>Wind Speed</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./weather.js"></script>
+  </body>
+</html>
+
+<!--
+94bebed3f56ec406b5b35b4da1bb3cd3
+https://api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}
+
+-->

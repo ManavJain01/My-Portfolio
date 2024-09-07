@@ -80,7 +80,7 @@ const Index = () => {
       <div className="relative flex flex-col gap-10 p-12">
 
         <div className="flex flex-col gap-10">
-          <Link to={data.projects["MERN Projects"].link} className="text-5xl font-bold w-fit">MERN Projects</Link>
+          <Link to={data.projects["MERN Projects"].link} className="text-5xl font-bold w-fit hover:text-blue-900">MERN Projects</Link>
           
           <div>
             {/* Carousal */}
@@ -100,7 +100,7 @@ const Index = () => {
         </div>
 
         <div className="flex flex-col gap-10">
-          <Link to={data.projects["Blockchain Projects"].link} className="text-5xl font-bold w-fit">BlockChain Projects</Link>
+          <Link to={data.projects["Blockchain Projects"].link} className="text-5xl font-bold w-fit hover:text-blue-900">BlockChain Projects</Link>
           
           <div>
             {/* Carousal */}

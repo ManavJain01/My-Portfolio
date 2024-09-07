@@ -32,7 +32,25 @@ export default {
           '0%': { bottom: '-1.75rem', zIndex: '30' }, // -bottom-3 and change z-index
           '50%': { bottom: '-3rem' },   // -bottom-20
           '100%': { bottom: '-0.5rem' } // -bottom-5
-        }
+        },
+        // Vanilla
+        scale: {
+          '0%' : {
+            width: '150px',
+            height: '40px'
+          },
+        
+          '50%' : {
+            width: '165px',
+            height: '65px',
+            fontSize: 'larger'
+          },
+        
+          '100%' : {
+            width: '150px',
+            height: '40px'
+          }
+        },
       },
       animation: {
         // portfolio-1
@@ -41,7 +59,9 @@ export default {
         "loop-scroll": "loop-scroll 50s linear infinite",
         // Projects
         'bottom-transition': 'bottom-transition 1.5s ease-in-out forwards',
-        'bottom-transition-reverse': 'bottom-transition-reverse 1.5s ease-in-out forwards'
+        'bottom-transition-reverse': 'bottom-transition-reverse 1.5s ease-in-out forwards',
+        // vanilla
+        'scale': 'scale 2s linear infinite',
       },
       boxShadow: {
         neuMorphism : '-3px -3px 7px #ffffff, 3px 3px 5px #ceced1',
