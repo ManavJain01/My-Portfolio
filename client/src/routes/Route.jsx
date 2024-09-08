@@ -36,6 +36,7 @@ import MERN_Main from '@/Projects/Techs/MERN/Main'
 import MERN_StudentDetails from '@/Projects/Techs/MERN/my-projects/Student Details/StudentDetails'
 import MERN_UsersInfo from '@/Projects/Techs/MERN/my-projects/Users Info/Users'
 import NextJs from '@/Projects/Techs/NextJs/NextJs'
+import ML from '@/Projects/Techs/ML/ML'
 import ReactNative from '@/Projects/Techs/React Native/Native'
 import Java from '@/Projects/Techs/Java/Java'
 import DSA from '@/Projects/Techs/DSA Problems/DSA'
@@ -79,6 +80,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           <Route path="UsersInfo" element={<MERN_UsersInfo />} />
         </Route>
         <Route path="/Projects/NextJs" element={<NextJs />}></Route>
+        <Route path="/Projects/MachineLearning" element={<ML />}></Route>
         <Route path="/Projects/ReactNative" element={<ReactNative />}></Route>
         <Route path="/Projects/Java" element={<Java />}></Route>
         <Route path="/Projects/DSA-Problems" element={<DSA />}></Route>
