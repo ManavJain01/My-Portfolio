@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 // Importing Local files
 import data from '@/Data/api.json'
 
-export default function Footer({data}) {
+export default function Footer() {
   return (
     <nav id="footer-java" className="flex gap-10 items-center justify-around min-h-44 p-5">
       <ul className="flex flex-col items-center gap-1">
