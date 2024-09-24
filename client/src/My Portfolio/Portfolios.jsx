@@ -1,12 +1,12 @@
 // Importing local Images
-import portfolio1 from './Images/portfolio1.png'
-import portfolio2 from './Images/portfolio2.png'
-import pageNotFound from './Images/PageNotFound.png'
+import portfolio1 from '../Images/portfolio1.png'
+import portfolio2 from '../Images/portfolio2.png'
+import pageNotFound from '../Images/PageNotFound.png'
 
 // Importing React Packages
 import { Link } from 'react-router-dom'
 
-function App() {
+function Portfolios() {
   // My Object File
   const portfolios = [
     {
@@ -70,4 +70,4 @@ function App() {
   )
 }
 
-export default App
+export default Portfolios

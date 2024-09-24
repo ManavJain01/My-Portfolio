@@ -17,7 +17,7 @@ export default function Experience({ darkTheme }) {
   return (
     <div className={`py-20 pb-96 flex flex-col gap-20`}>
       {/* Experience */}
-      <h1 className="text-6xl font-semibold text-center md:text-start">My Experiences</h1>
+      <h1 className="text-4xl md:text-6xl font-semibold text-center md:text-start">My Experiences</h1>
       <div className="flex flex-wrap">
         {myExperience.map((e,i) => {
           return(

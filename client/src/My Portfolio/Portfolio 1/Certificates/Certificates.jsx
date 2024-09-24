@@ -65,7 +65,7 @@ export default function Certificates({ darkTheme }) {
   return (
     <div className={`flex flex-col gap-20 py-20 pb-96`}>
       {/* Certificates */}
-      <h1 className="text-6xl font-semibold">Certificates</h1>
+      <h1 className="text-4xl md:text-6xl font-semibold text-center">Certificates</h1>
 
       {/* Certificate */}
       <div>

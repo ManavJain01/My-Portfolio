@@ -7,7 +7,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './index.css'
 
 //      * Main Page *
-import App from '../App.jsx'
+import Portfolios from '../My Portfolio/Portfolios.jsx'
 
 //      * Portfolio 1 *
 import Portfolio1 from '../My Portfolio/Portfolio 1/Home Page/components/Main.jsx'
@@ -48,7 +48,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <BrowserRouter>
       <Routes>
         {/* Main Page */}
-        <Route path="/HomePage" element={<App />}></Route>
+        <Route path="/Portfolio" element={<Portfolios />}></Route>
 
         {/* Portfolio 1 */}
         {/* Uncomment 🢛 */}

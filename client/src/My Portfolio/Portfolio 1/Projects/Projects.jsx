@@ -1,15 +1,16 @@
 // Importing React Icons
 import { GrProjects } from "react-icons/gr";
+import { FcManager } from "react-icons/fc";
 
 // Importing my projects
 import projects from '@/Projects/projects.json'
 
 // Importing React Packages
 import { Link } from 'react-router-dom'
+import { useEffect, useState } from "react";
 
 // Importing Framer Motion
 import { motion } from "framer-motion"
-import { useEffect, useState } from "react";
 
 // Importing Local files
 import data from '@/Data/api.json'
@@ -35,17 +36,19 @@ function Projects({ darkTheme }){
 
   return (
     <div className={`flex flex-col gap-10 py-20 pb-64`}>
-      <h1 className="text-6xl font-semibold text-center md:text-start">Projects</h1>
-      
-      <div className="flex gap-5">
+      {/* Projects Headline */}
+      <h1 className="text-4xl md:text-6xl font-semibold text-center md:text-start">Projects</h1>
+      {/* Buttons */}
+      <div className="flex gap-5 flex-wrap sm:flex-nowrap justify-center">
         {category.map((e,i) => {
           return(
-            <button key={i} onClick={() => setProjectType(e)} className={`text-2xl text-white bg-orange-500 px-5 py-2 rounded-lg ${projectType === e && "bg-orange-700"} duration-300 cursor-none`}>{e}</button>
+            <button key={i} onClick={() => setProjectType(e)} className={`md:whitespace-nowrap text-2xl text-white bg-orange-500 px-5 py-2 rounded-lg ${projectType === e && "bg-orange-700"} duration-300 cursor-none`}>{e}</button>
           )
         })}
       </div>
 
       <div className="flex flex-col gap-20">
+        {/* Projects */}
         <div className="flex flex-wrap gap-20 /justify-around">
           {
             projects
@@ -65,13 +68,21 @@ function Projects({ darkTheme }){
               )
             })
           }
-          
+          {/* More Projects */}
           <Link to={data["my info"]?.allProjects} className={`h-64 w-80 rounded-md shadow-2xl hover:shadow-green-400 active:hover:shadow-blue-400 cursor-none hover:scale-[120%] duration-700 ${darkTheme ? "shadow-purple-400" : "shadow-gray-400"}`}>
             <div className={`${colors[colorIndex]} p-5 flex flex-col gap-5 items-center`}>
               <GrProjects className="size-36" />
               <h1 className="font-bold text-2xl">More Projects</h1>
             </div>
           </Link>
+
+          {/* My Portfolios */}
+          {/* <Link to="/Portfolio" className={`h-64 w-80 rounded-md shadow-2xl hover:shadow-green-400 active:hover:shadow-blue-400 cursor-none hover:scale-[120%] duration-700 ${darkTheme ? "shadow-purple-400" : "shadow-gray-400"}`}>
+            <div className={`${colors[colorIndex]} p-5 flex flex-col gap-5 items-center`}>
+              <FcManager className="size-36" />
+              <h1 className="font-bold text-2xl">My Other Porfolios</h1>
+            </div>
+          </Link> */}
         </div>
       </div>
     </div>
