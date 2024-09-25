@@ -1,3 +1,4 @@
+import VisinaryBot from './Images/visinarybot.png'
 import DiceGame from './Images/DiceGame.png'
 import foodyZone from './Images/foody zone.png'
 import firebase from './Images/firebase contact app.png'
@@ -9,6 +10,13 @@ import login from './Images/login.png'
 export let i = 1;
 
 const object = [
+  // {
+  //   Link:"ai",
+  //   Img: VisinaryBot,
+  //   p1:"React Project with Ai Api calls",
+  //   p2:"VisinaryBot",
+  //   id:`project${i++}`
+  // },
   {
     Link:"Dice/FrontPage",
     Img: DiceGame,
