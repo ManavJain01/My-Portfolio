@@ -55,7 +55,7 @@ export default function Sidebar() {
     },
     {
       option: "Settings",
-      link: "/",
+      link: "settings",
       logo: <IoSettingsOutline className="size-5" />
     },
     {

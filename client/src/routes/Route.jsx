@@ -26,6 +26,7 @@ import Vanilla from '@/Projects/Techs/Vanilla/Vanilla'
 import React from '@/Projects/Techs/React/React'
 import React_AI from '@/Projects/Techs/React/my-projects/Ai Dashboard/Route'
   import React_AIDashboard from '@/Projects/Techs/React/my-projects/Ai Dashboard/components/Dashboard'
+  import React_AI_Settings from '@/Projects/Techs/React/my-projects/Ai Dashboard/specific components/Settings'
   import React_AI_ImgGenerator from '@/Projects/Techs/React/my-projects/Ai Dashboard/specific components/ImgGenerator'
   import React_AI_ChatAi from '@/Projects/Techs/React/my-projects/Ai Dashboard/specific components/ChatAi'
   import React_AI_OpenAi from '@/Projects/Techs/React/my-projects/Ai Dashboard/openai/OpenAi'
@@ -77,6 +78,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path="/Projects/React" element={<React />}></Route>
         <Route path="/Projects/React/ai" element={<React_AI />}>
           <Route path="" element={<React_AIDashboard />} />
+          <Route path="settings" element={<React_AI_Settings />} />
           <Route path="img-generator" element={<React_AI_ImgGenerator />} />
           <Route path="chatai" element={<React_AI_ChatAi />} />
           <Route path="openai" element={<React_AI_OpenAi />} />

@@ -11,6 +11,10 @@ export default {
       screens: {
         'xs': '431px'
       },
+      transitionDuration: {
+        '400': '400ms',
+        '600': '600ms',
+      },
       keyframes: {
         // portfolio-1
         navAnimation: {
@@ -51,6 +55,22 @@ export default {
             height: '40px'
           }
         },
+        meta_morph: {
+          '0%': { borderRadius: '25%', transform: 'scale(1)' },
+          '50%': { borderRadius: '50%', transform: 'scale(1.1)' },
+          '100%': { borderRadius: '25%', transform: 'scale(1)' },
+        },
+        meta_shapeMorph: {
+          '0%': { borderRadius: '20%' },
+          '25%': { borderRadius: '50%' },
+          '50%': { borderRadius: '40% 60% 70% 30% / 50% 20% 80% 50%' }, // Blob-like shape
+          '75%': { borderRadius: '30%' },
+          '100%': { borderRadius: '20%' },
+        },
+        meta_colorMorph: {
+          '0%, 100%': { background: 'linear-gradient(to right, #9333EA, #1E40AF, #0C4A6E)' },
+          '50%': { background: 'linear-gradient(to right, #1E3A8A, #27408B, #2A52BE)' },
+        },
       },
       animation: {
         // portfolio-1
@@ -62,6 +82,9 @@ export default {
         'bottom-transition-reverse': 'bottom-transition-reverse 1.5s ease-in-out forwards',
         // vanilla
         'scale': 'scale 2s linear infinite',
+        meta_morph: 'meta_morph 4s infinite',
+        meta_shapeMorph: 'meta_shapeMorph 5s infinite ease-in-out',
+        meta_colorMorph: 'meta_colorMorph 8s infinite',
       },
       boxShadow: {
         neuMorphism : '-3px -3px 7px #ffffff, 3px 3px 5px #ceced1',
@@ -79,5 +102,15 @@ export default {
       }
     },
   },
-  plugins: [require("tailwind-scrollbar")],
+  plugins: [
+    require("tailwind-scrollbar"),
+    function ({ addUtilities }) {
+      const newUtilities = {
+        '.meta_clipPath-diamond': {
+          'clip-path': 'polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)', // Diamond shape
+        },
+      };
+      addUtilities(newUtilities);
+    },
+  ],
 }

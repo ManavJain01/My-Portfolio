@@ -51,7 +51,7 @@ function Footer(){
       </div>
 
       <span onMouseOver={() => showSecretBtn()} className="absolute right-0 bottom-0 px-3 py-1 text-black bg-black">Hover me</span>
-      <Link to='/HomePage' className={`absolute -left-28 bottom-0 px-5 py-1 bg-gray-900 text-gray-600 rounded-lg cursor-none hover:-left-4 ${secretBtn ? "flex" : "hidden"}`}>Home Page</Link>
+      <Link to='/portfolio' className={`absolute -left-28 bottom-0 px-5 py-1 bg-gray-900 text-gray-600 rounded-lg cursor-none hover:-left-4 ${secretBtn ? "flex" : "hidden"}`}>Home Page</Link>
     </div>
   )
 }
