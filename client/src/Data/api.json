@@ -40,7 +40,8 @@
       "projects" : [
         {
           "project" : "Next Authentication",
-          "img" : "src/Data/images/NextJs/NextAuth.png",
+          "img" : "/src/Data/images/NextJs/NextAuth.png",
+          "link": "https://github.com/ManavJain01/NextJs-userAuth",
           "p1" : "A Next Js Based Authentication Application"
         }
       ]

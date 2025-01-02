@@ -2,9 +2,9 @@
 import UsersInfo from './Images/Users Info.png'
 import StudentDetails from './Images/Student Details.png';
 import Dismefa from './Images/Dismefa.png'
+import Adminify from '../../Home Page/images/First Page/Dashboard.png'
 import FoodDelivery from './Images/Food Delivery App.png'
 import webStreaming from './Images/webStreaming.png'
-import NextAuth from'./Images/NextAuth.png'
 
 export let i = 1;
 
@@ -14,7 +14,7 @@ const object = [
     Link: "https://e-commerce-mauve-phi.vercel.app/",
     Img: Dismefa,
     p1:"My Major MERN Project",
-    p2:"Medicine E-Commerce",
+    p2:"Dismefa Medicos",
     id:`project${i++}`,
     flip: {
       p1: "This is my Major Project in MERN Stack which is a Medicine E-Commerce Application",
@@ -23,10 +23,20 @@ const object = [
     }
   },
   {
+    Link: "https://github.com/ManavJain01/Adminify",
+    Img: Adminify,
+    p1:"My Major MERN Project",
+    p2:"Adminify",
+    id:`project${i++}`,
+    flip: {
+      p1: "This is my Major Project in MERN Stack which is a Company Management Application",
+    }
+  },
+  {
     Link:"https://food-delivery-app-phi-ten.vercel.app/",
     Img: FoodDelivery,
     p1:"MERN Project with Tailwind, Jwt",
-    p2:"Food Delivery App",
+    p2:"BestFood",
     id:`project${i++}`,
     flip: {
       p1: "This is a Food Ordering Application"
@@ -40,16 +50,6 @@ const object = [
     id:`project${i++}`,
     flip: {
       p1: "This is The Clone of Netflix"
-    }
-  },
-  {
-    Link:"",
-    Img: NextAuth,
-    p1:"My First NextJS, Typescript Project",
-    p2:"Next Auth",
-    id:`project${i++}`,
-    flip: {
-      p1: "This is a Authentication Application in Next JS"
     }
   },
   //Minor Projects

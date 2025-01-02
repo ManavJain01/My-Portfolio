@@ -7,6 +7,7 @@ import CheckBox from './CheckBox';
 
 // Importing React Packages
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const NextJs = () => {
   const [checked, setChecked] = useState(false);
@@ -52,22 +53,23 @@ const NextJs = () => {
 
       {/* My Projects */}
       <div className="flex flex-wrap gap-10">
+        {/* Calculator */}
+        <Calculator morphism={morphism} />
+
         {data.projects['Next Js Projects'].projects.map((project, index) => (
-          <div key={index} className={`flex flex-col items-center gap-3 w-[350px] h-[400px] py-2 px-5 rounded-lg ${morphism.outset}`}>
+          <Link to={project.link} key={index} className={`flex flex-col items-center justify-around gap-3 w-[350px] h-[450px] py-2 px-5 rounded-lg ${morphism.outset}`}>
             <span className="font-bold text-4xl">Project {index + 1}</span>
             
             <div className={`flex items-center justify-center w-[300px] py-2 rounded-lg ${morphism.outset} ${'hover:' + morphism.inset}`}>
-              <img src={project.img} alt={`project-${index}`} className="w-[280px] rounded-lg" />
+              <img src={project.img} alt={`project-${index}`} className="w-[280px] h-[200px] rounded-lg" />
             </div>
 
             <div className={`flex flex-col gap-5 px-5 py-2 rounded-lg ${morphism.outset} ${'hover:' + morphism.full_inset}`}>
               <span className="font-bold text-2xl">{project.project}</span>
               <p className='text-blue-700 text-sm'>{project.p1}</p>
             </div>
-          </div>
+          </Link>
         ))}
-
-        <Calculator morphism={morphism} />
       </div>
     </div>
   );

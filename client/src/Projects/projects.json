@@ -1,13 +1,13 @@
 [
   {
     "name": "Medicine Ecommerce",
-    "link": "https://dismefa.netlify.app/",
+    "link": "https://e-commerce-mauve-phi.vercel.app/",
     "img": "https://mern-projects-amber.vercel.app/assets/Dismefa-DmmBBZn1.png",
     "category": "MERN STACK PROJECTS"
   },
   {
-    "name": "Fithub",
-    "link": "",
+    "name": "Adminify",
+    "link": "https://github.com/ManavJain01/Adminify",
     "img": "https://res.cloudinary.com/dgjxxuzdr/image/upload/v1724179681/pusdhtbrgwpjrhtvinud.png",
     "category": "MERN STACK PROJECTS"
   },

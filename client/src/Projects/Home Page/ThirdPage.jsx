@@ -6,7 +6,7 @@ import "slick-carousel/slick/slick-theme.css"
 // Importing Images
 import Dismefa from './images/Third Page/Dismefa.png'
 import FoodDelivery from './images/Third Page/Food Delivery App.png'
-import NextAuth from './images/Third Page/NextAuth.png'
+import Adminify from './images/Third Page/Dashboard.png'
 import WebStreaming from './images/Third Page/webStreaming.png'
 import ChatDAPP from './images/Third Page/Chat_DAPP.png'
 
@@ -33,9 +33,9 @@ const Index = () => {
       link: "https://e-commerce-mauve-phi.vercel.app/"
     },
     {
-      project: "Next Auth",
-      img: NextAuth,
-      link: ""
+      project: "Adminify",
+      img: Adminify,
+      link: "https://github.com/ManavJain01/FitHub"
     },
     {
       project: "Web Streaming",

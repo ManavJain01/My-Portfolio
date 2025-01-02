@@ -2,7 +2,7 @@ function Button(props, onClick/*, ...restProps*/){
   if(props.square == 'square'){
     return(
       <button onClick={props.functionS}
-       className={`${props.className} sm:ml-3 py-1 sm:py-2 px-2 sm:px-4 border sm:border-2 border-black font-bold text-lg hover:bg-black hover:text-white focus:bg-black focus:text-white`}>
+       className={`${props.className} ${props.setStyle ? "bg-black text-white" : "hover:bg-gray-800 hover:text-white"} sm:ml-3 py-1 sm:py-2 px-2 sm:px-4 border sm:border-2 border-black font-bold text-lg`}>
         {props.text}
       </button>
     )

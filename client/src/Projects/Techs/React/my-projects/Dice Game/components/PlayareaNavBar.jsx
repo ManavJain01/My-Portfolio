@@ -2,6 +2,7 @@ import Button from './Button'
 
 function PlayareaNavBar(props) {
   const arr=[1,2,3,4,5,6]
+
   return (
     <>
       <div className="flex justify-between">
@@ -16,7 +17,7 @@ function PlayareaNavBar(props) {
           <section className="sm:fixed flex">
             {
               arr.map((data)=>
-                <Button key={data} text={data} square={'square'} functionS={()=>{props.setNumSelec(data)}} />
+                <Button key={data} text={data} square={'square'} functionS={()=>{props.setNumSelec(data)}} setStyle={props.numSelec === data} />
               )
             }
             

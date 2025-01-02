@@ -1,3 +1,6 @@
+// Importing Images
+import NextAuth from './images/Fourth Page/NextAuth.png'
+
 // Importing Carousel Packages
 import Slider from 'react-slick'
 import "slick-carousel/slick/slick.css"
@@ -21,7 +24,13 @@ export default function FourthPage() {
 
   const ReactNativeProjects = []
 
-  const NextJsProjects = []
+  const NextJsProjects = [
+    {
+      project: "Next Auth",
+      img: NextAuth,
+      link: ""
+    },
+  ]
 
   return (
     <div className="relative h-lvh overflow-x-hidden">

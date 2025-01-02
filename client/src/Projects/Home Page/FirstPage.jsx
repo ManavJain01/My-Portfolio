@@ -7,6 +7,7 @@ import "slick-carousel/slick/slick-theme.css"
 import Dismefa from './images/First Page/Dismefa.png'
 import ChatDAPP from './images/First Page/Chat_DAPP.png'
 import FoodDelivery from './images/First Page/Food Delivery App.png'
+import Adminify from './images/First Page/Dashboard.png'
 
 // Importing React Packages
 import { Link } from 'react-router-dom'
@@ -30,6 +31,11 @@ const Index = () => {
       project: "E-Commerce",
       img: Dismefa,
       link: "https://e-commerce-mauve-phi.vercel.app/"
+    },
+    {
+      project: "Adminify",
+      img: Adminify,
+      link: "https://github.com/ManavJain01/FitHub"
     },
     {
       project: "Food Delivery App",

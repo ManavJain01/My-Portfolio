@@ -1,8 +1,19 @@
+// Importing local images
+import dice_1 from "../Images/dice_1.png"
+import dice_2 from "../Images/dice_2.png"
+import dice_3 from "../Images/dice_3.png"
+import dice_4 from "../Images/dice_4.png"
+import dice_5 from "../Images/dice_5.png"
+import dice_6 from "../Images/dice_6.png"
+
 import Button from './Button';
 import ShowRules from './ShowRules';
 import { useState } from 'react'
 
 function PlayareaMain(props) {
+  // Variables
+  const diceImages = [null, dice_1, dice_2, dice_3, dice_4, dice_5, dice_6];
+
   const [show2, setShow2] = useState(false)
   const [image, setImage] = useState(1);
 
@@ -68,7 +79,7 @@ function PlayareaMain(props) {
     <div className="flex justify-end">
       <div className="mt-1 sm:mt-10 flex flex-col items-center">
         <button onClick={()=>{gameStart()}}>
-          <img src={`../Images/dice_${image}.png`} alt='dice_faces' className="object-contain w-10 sm:w-56 mt-16 sm:mt-0" />
+          <img src={diceImages[image]} alt='dice_faces' className="object-contain w-10 sm:w-56 mt-16 sm:mt-0" />
         </button>
         <span className="my-2 font-semibold text-lg sm:text-2xl">Click on Dice to roll</span>
         <Button text={"Reset Score"} square={'reset'} functionS={resetScore} />

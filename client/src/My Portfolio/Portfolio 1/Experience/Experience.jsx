@@ -26,7 +26,7 @@ export default function Experience({ darkTheme }) {
   };
 
   return (
-    <div className={`py-20 pb-96 flex flex-col gap-20`}>
+    <div className={`${more ? "pb-40" : "pb-96"} py-20 flex flex-col gap-20`}>
       {/* Experience */}
       <h1 className="text-4xl md:text-6xl font-semibold text-center md:text-start">My Experiences</h1>
       <div className="flex flex-wrap gap-20">
@@ -49,19 +49,19 @@ export default function Experience({ darkTheme }) {
           )
         })}
 
-        {/* <button onClick={() => setMore(!more)} className={`font-bold flex justify-center items-center ${more ? "text-xl gap-5 w-full py-2" : "text-3xl flex-col w-[23rem] min-h-[23rem]"} rounded-md shadow-lg cursor-none ${darkTheme ? "bg-purple-700 shadow-purple-400" : "text-purple-700"}`}>
+        <button onClick={() => setMore(!more)} className={`font-bold flex justify-center items-center ${more ? "text-xl gap-5 w-full py-2" : "text-3xl flex-col w-[23rem] min-h-[23rem]"} rounded-md shadow-lg cursor-none ${darkTheme ? "bg-purple-700 shadow-purple-400" : "text-purple-700"}`}>
           {more
             ?<>
               <span>Show less</span>
               <MdKeyboardDoubleArrowUp />
             </>
             :<>
-              <span>Click For</span>
-              <span>More</span>
-              <span>Experience</span>
+              <span>Checkout</span>
+              <span>My Other</span>
+              <span>Experiences</span>
             </>
         }
-        </button> */}
+        </button>
       </div>
 
       {/* When modal opens */}
